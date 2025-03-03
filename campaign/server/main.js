@@ -1,11 +1,17 @@
-console.log("log from /server/main.js");
+import {Meteor} from 'meteor/meteor';
+// Meteor import allows us access to Meteor.startup which waits for the server
+// to finish processing everything before the code inside of startup is run
 
-// import './../imports/utils.js';
+import {UP_Collection_Access} from './../imports/api/user_posts.js';
+// this gives us access to the UP_Collection_Access object so we can interact with the DB
 
-import {say_hello} from './../imports/utils.js';
 
-console.log(say_hello());
+Meteor.startup(async function(){
 
-import {add} from './../imports/math.js';
 
-console.log(add(1, 2));
+
+  
+  console.log(await UP_Collection_Access.find().fetch());
+
+
+});
