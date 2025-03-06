@@ -5,7 +5,7 @@ import {Meteor} from 'meteor/meteor';
 import {UP_Collection_Access} from './../imports/api/user_posts.js';
 // Provides access to UP_Collection_Access collection to interact with the database.
 
-import {Thoughts_Collection_Access} from './../imports/api/user_posts.js';
+
 
 
 // Meteor.publish() is used on the server side to specify which data is available to the client. 
@@ -13,16 +13,14 @@ import {Thoughts_Collection_Access} from './../imports/api/user_posts.js';
 Meteor.publish("user_posts_collection", function() {
   return UP_Collection_Access.find();
 });
-Meteor.publish("random_thoughts", function() {
-  return Thoughts_Collection_Access.find();
-});
+
 
 Meteor.startup(async function(){
 
 
 
 
-  
+
 
 
 
@@ -55,8 +53,8 @@ Meteor.startup(async function(){
     },
   };
 
-  // Assign the allowAllOperations rules to both collections.
+  // Assign the allowAllOperations rules to collection.
   UP_Collection_Access.allow(allowAllOperations);
-  Thoughts_Collection_Access.allow(allowAllOperations);
+
 });
 
