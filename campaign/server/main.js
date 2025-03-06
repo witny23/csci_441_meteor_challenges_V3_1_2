@@ -1,15 +1,28 @@
 import {Meteor} from 'meteor/meteor';
-// Meteor import allows us access to Meteor.startup which waits for the server
-// to finish processing everything before the code inside of startup is run
+// Meteor import allows access to Meteor.startup, which ensures the 
+// server finishes processing before running the code inside the startup function.
 
 import {UP_Collection_Access} from './../imports/api/user_posts.js';
-// this gives us access to the UP_Collection_Access object so we can interact with the DB
+// Provides access to UP_Collection_Access collection to interact with the database.
 
+import {Thoughts_Collection_Access} from './../imports/api/user_posts.js';
+
+
+// Meteor.publish() is used on the server side to specify which data is available to the client. 
+// This publication allows the client to subscribe to the 'user_posts_collection' data.
+Meteor.publish("user_posts_collection", function() {
+  return UP_Collection_Access.find();
+});
+Meteor.publish("random_thoughts", function() {
+  return Thoughts_Collection_Access.find();
+});
 
 Meteor.startup(async function(){
 
 
 
+
+  
 
 
 
@@ -26,12 +39,11 @@ Meteor.startup(async function(){
 
 
 
-  // The following allows the client to insert, remove, and update data from the collection
-  // Allowing all inserts from the client is a Security risk
-  // Anyone can open the browser console and run:
-  // UP_Collection_Access.insert({ topic: "Hacked!", votes: 9999 });
+  // The following method allows the client to insert, remove, and update data from the collection.
+  // **WARNING**: Allowing all operations from the client is a security risk, as any user can modify the data.
+  // For example, someone can run: UP_Collection_Access.insert({ topic: "Hacked!", votes: 9999 });
 
-  UP_Collection_Access.allow({
+  const allowAllOperations = {
     insert(userId, doc) {
       return true; // Anyone can insert
     },
@@ -41,6 +53,10 @@ Meteor.startup(async function(){
     update(userId, doc, fieldNames, modifier) {
       return true; // Anyone can update
     },
-  });
+  };
+
+  // Assign the allowAllOperations rules to both collections.
+  UP_Collection_Access.allow(allowAllOperations);
+  Thoughts_Collection_Access.allow(allowAllOperations);
 });
 
