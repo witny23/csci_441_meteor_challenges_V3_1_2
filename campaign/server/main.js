@@ -13,7 +13,7 @@ Meteor.startup(async function(){
 
   // convert the following line into an ES6 function
   let multiply = function (x,y){
-    return x * y;               // convert the following line into an ES6 function
+    return x * y;
   }
   console.log(multiply(10,5));
 
