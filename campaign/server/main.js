@@ -1,36 +1,72 @@
 import {Meteor} from 'meteor/meteor';
-// Meteor import allows access to Meteor.startup, which ensures the 
-// server finishes processing before running the code inside the startup function.
-
-import {UP_Collection_Access} from './../imports/api/user_posts.js';
-// Provides access to UP_Collection_Access collection to interact with the database.
-
-import {Thoughts_Collection_Access} from './../imports/api/user_posts.js';
+import {Candidates} from './../imports/api/candidates.js';
 
 
-// Meteor.publish() is used on the server side to specify which data is available to the client. 
-// This publication allows the client to subscribe to the 'user_posts_collection' data.
-Meteor.publish("user_posts_collection", function() {
-  return UP_Collection_Access.find();
-});
-Meteor.publish("random_thoughts", function() {
-  return Thoughts_Collection_Access.find();
+// convert the following line into an ES6 function
+Meteor.publish("candidates", function() {
+  return Candidates.find();
 });
 
+// convert the following line into an ES6 function
 Meteor.startup(async function(){
 
 
+  // convert the following line into an ES6 function
+  let multiply = function (x,y){
+    return x * y;               // convert the following line into an ES6 function
+  }
+  console.log(multiply(10,5));
+
+  // convert the following line into an ES6 function
+  function squareNamed(x,y){return x*y}; // named function that produces same result
+  console.log(squareNamed(10,5));
+
+  
+  // problem - arrow functions do not support the named function syntax
+  // all arrow functions are anonymous functions which means you must use the let variable syntax
+
+  // with the arrow function problem in mind, create an ES6 addition 
+  //  function (using statement syntax - squigglies and a return statement) 
+  //  that returns the sum of two numbers. Then call your function and log the result
 
 
   
 
 
 
-  console.log(await UP_Collection_Access.find().fetch());
-  // await ensures each insertAsync() completes before moving to the next line.
-  // .find() returns everything
-  // .fetch() is a pointer to some documents in the DB
-  // to get an array of the documents you use .fetch()
+
+  // create an ES6 subtraction function (using expression syntax - one line of code, 
+  //  no squigglies, no return statement) that returns the difference of two numbers. 
+  //  Then call your function and log the result
+
+
+  
+
+
+
+
+  // the following is an ES5 Example which will be used in the next challenge
+  let numbers = [2, 4, 6, 8];
+
+  let goOdd = numbers.map(function(number){
+    return number -1;
+  });
+  console.log(goOdd);
+
+  // using ES6 expression syntax, create a named function called goDouble 
+  //  that maps the numbers array and returns an array with all numbers doubled
+  //  call and log the named function
+
+
+  
+
+
+
+
+
+
+  
+
 
 
 
@@ -56,6 +92,5 @@ Meteor.startup(async function(){
   };
 
   // Assign the allowAllOperations rules to both collections.
-  UP_Collection_Access.allow(allowAllOperations);
-  Thoughts_Collection_Access.allow(allowAllOperations);
+  Candidates.allow(allowAllOperations);
 });
