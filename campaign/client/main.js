@@ -13,14 +13,11 @@ const renderCandidates = (candidateObject) => {
     return (
       <p key={candidate._id}>
       <button onClick={() => { 
-// on the following line, remove a candidate from the db 
         Candidates.remove({_id: candidate._id})
       }}>X</button> 
       <button onClick={() => { 
-// on the following line, add a vote for the candidate 
         Candidates.update({_id: candidate._id}, {$inc: {votes: 1}})
       }}>+1</button> 
-{/* In the following lines, create a button that will remove a vote from the candidate */ }
       <button onClick={() => {  
         Candidates.update({_id: candidate._id}, {$inc: {votes: -1}})
       }}>-1</button>

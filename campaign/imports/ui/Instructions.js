@@ -3,14 +3,13 @@ import React from 'react';
 export const Instructions = (
     <div>
       <h1>Instructions</h1>
-      <p>The purpose of these challenges is to practice updating a mongoDb:
+      <p>The purpose of these challenges is to practice applying ES6 class concepts and React practices:
       </p>
-      <h2>Part 1: mongoDb updates (vids 11a &amp; 12a)</h2>
-      <h3></h3>
+      <h2>Part 1: ES6 Class Challenge (vids 13a &amp; 13b)</h2>
       <ul>
-        <li>In client/main.js:
+        <li>In server/main.js:
           <ul>
-            <li>follow instructions provided in the file</li>
+            <li>review the contents/comments in the file and complete the challenge at the bottom of the file</li>
           </ul>
         </li>
       </ul>

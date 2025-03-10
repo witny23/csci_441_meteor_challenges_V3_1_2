@@ -1,25 +1,21 @@
 
-git mongoDB challenges for vids 11a, 12a
+git Class challenges for vids 13a, 13b, 14a, 14b
 
 GOALS
 
     To practice concepts as found in the videos/git repo
 
 
-        11a - remove mongoDB entries with a button: 1bf477031e968784b9b666d0f920d7a12be579d1
-        12a - mongoDB update operators $inc, $set: 8c7870868cbe1fe16948d0dc5324232c93b94798
+        13a - ES6 intro: e082f1b2b0f2cfe790e9d3ea2051d3b2a44e58f7
+        13b - challenge - ES6: create person description method: 2ef4691c7fd31b2e3e97ad4d67d3e477d67ccdce
+        14a - ES6 classes continued: 860a2f2a92e62d0eea86c7c77c9b6c7bc6941ff0
+        14b - challenge - ES6: customize person class: dbaa50b2789adf33b6dcc584679880cd993a3b2c
+        
 
+INSTRUCTIONS
 
-MONGO CONCEPTS
-    db.candidates_collection.find()
-    db.candidates_collection.deleteMany({name: 'pat'})
-    db.candidates_collection.deleteOne({_id: 'xyz'})
+    Found on main.html when program is running or in imports/api/instructions.js
 
-    $set will allow us to set one field
-        db.candidates_collection.update({_id: 'foo'}, {$set: {vodes: 5}})
-    
-    $inc can be used to increment
-        db.candidates_collection.update({_id: 'foo'}, {$inc: {vodes: 1}})
 
 
 Stop runaway mongo on windows
