@@ -14,4 +14,4 @@ import {Mongo} from 'meteor/mongo';
 export const UP_Collection_Access = new Mongo.Collection('user_posts_collection');
 // this can now be imported in our server/main.js
 
-export const Thoughts_Collection_Access = new Mongo.Collection('called_random_thoughts');
+export const Thoughts_Collection_Access = new Mongo.Collection('random_thoughts');
