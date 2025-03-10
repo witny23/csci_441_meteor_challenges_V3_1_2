@@ -8,31 +8,28 @@ import {Instructions} from '../imports/ui/Instructions.js';
 Meteor.subscribe("candidates_collection");
 
 
-const renderCandidates = function (candidateObject) {
-  let candidateInfo = candidateObject.map(function(candidate){
-    return <p key={candidate._id}>{candidate.name} has {candidate.votes} vote[s]</p>;
-  });
+const renderCandidates = (candidateObject) => {
+  let candidateInfo = candidateObject.map((candidate) => (
+    <p key={candidate._id}>{candidate.name} has {candidate.votes} vote[s]</p>
+  ));
   return candidateInfo;
 };
 
-const processFormDataFunction = function (event) {
+const processFormDataFunction = (event) => {
   event.preventDefault();
   let candidateName = event.target.formInputNameAttrubute.value;
 
-  if(candidateName){
+  if (candidateName) {
     event.target.formInputNameAttrubute.value = '';
     Candidates.insert({
-        name: candidateName,
-        votes: 0,
+      name: candidateName,
+      votes: 0,
     });
-  };
+  }
 };
 
-
-Meteor.startup(function(){
-  Tracker.autorun(function(){ 
-
-
+Meteor.startup(() => {
+  Tracker.autorun(() => {
     let candidates = Candidates.find().fetch();
     let title = 'The big Campaign';
 
@@ -51,5 +48,4 @@ Meteor.startup(function(){
     );
     ReactDom.render(jsx, document.getElementById('content'));
   });
-
 });
