@@ -7,9 +7,9 @@ export default class TitleBar extends React.Component{ // jsx requires uppercase
   // it is a render method - this returns the jsx that is returned to the screen
   render(){
     return (
-      <div>
+      <>
         <h1>The big Campaign</h1>
-      </div>
+      </>
     );
   }
 };
