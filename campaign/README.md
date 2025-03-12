@@ -1,20 +1,17 @@
 
-git Class challenges for vids 13a, 13b, 14a, 14b
+git React Component challenges for vids 15a, 15b
 
 GOALS
 
     To practice concepts as found in the videos/git repo
 
 
-        13a - ES6 intro: 
-        13b - challenge - ES6: create person description method: 
-        14a - ES6 classes continued: 
-        14b - challenge - ES6: customize person class: 
-        
+        15a - first React: 
+        15b - challenge - React component placeholder: 
 
 INSTRUCTIONS
 
-    Found on main.html when program is running or in imports/api/instructions.js
+    Found on main.html when program is running or in imports/ui/Instructions.js
 
 
 

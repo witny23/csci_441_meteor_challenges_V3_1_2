@@ -3,7 +3,9 @@ import ReactDom from 'react-dom';
 import {Meteor} from 'meteor/meteor';
 import {Tracker} from 'meteor/tracker';
 import {Candidates} from './../imports/api/candidates.js'; 
-import {Instructions} from '../imports/ui/Instructions.js';
+import Instructions from '../imports/ui/Instructions.js'; // default export so no {}
+
+import TitleBar from './../imports/ui/TitleBar.js'; // default export so no {}
 
 Meteor.subscribe("candidates_collection");
 
@@ -50,18 +52,22 @@ Meteor.startup(() => {
 
 
     let candidates = Candidates.find().fetch();
-    let title = 'The big Campaign';
+    // let title = 'The big Campaign';
 
     let jsx = (
       <div>
-        {Instructions}
+        <Instructions />
 
         <hr></hr>
-        <h1>{title}</h1>
+        {/********** swap out the old h1 with the TitleBar components  ***************/}
+        {/*<h1>{title}</h1>*/}
+        <TitleBar/>
+
         <form onSubmit={processFormDataFunction}>
           <input type='text' name='formInputNameAttrubute' placeholder='Candidate Name' />
           <button>Add Candidate</button>
         </form>
+        
         {renderCandidates(candidates)}
       </div>
     );
