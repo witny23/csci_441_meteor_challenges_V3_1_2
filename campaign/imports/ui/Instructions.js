@@ -1,43 +1,30 @@
 import React from 'react';
 
-export default class Instructions extends React.Component{ 
+export default class Instructions extends React.Component{ // jsx requires uppercase when working with components
+  // by default react components only need to define one method and it is not the constructor
+  // it is a render method - this returns the jsx that is returned to the screen
   render(){
     return (
-    <>
+      <div>
       <h1>Instructions</h1>
-      <p>The purpose of these challenges is to practice creating React Props
+      <p>The purpose of these challenges is to practice creating React Components
       </p>
-      <h2>Part 1: Create a placeholder for a footer (vids 16a &amp; 16b)</h2>
+      <h2>Part 1: ES6 Class Challenge (vids 15a &amp; 15b)</h2>
       <ul>
-        <li>create an imports/ui/Footer.js file and then in that file:
+        <li>create an imports/ui/AddCandidates.js file and then in that file:
           <ul>
-            <li>create a component that returns an h1 'footer placeholder'</li>
+            <li>export a default AddCandidates class that extends React Component</li>
+            <li>render/return a placeholder using div as the container and a paragraph tag for the placeholder</li>
           </ul>
         </li>
         <li>client/main.js:
           <ul>
-            <li>import Footer.js</li>
-            <li>use Footer in page after the &lt;form&gt;</li>
+            <li>import the default export from AddCandidates.js</li>
+            <li>in the let jsx variable: place the imported placeholder component between the form and the renderCandidates(candidates)</li>
           </ul>
         </li>
       </ul>
-      <h2>Part 2: Make the footer dynamic by adding a prop (vids 16a &amp; 16b)</h2>
-      <ul>
-        <li>client/main.js:
-          <ul>
-            <li>create a variable called footer_content = 'my foot'; </li>
-            <li>pass the footer_content as a prop to the Footer component using &lt;Footer /&gt;</li>
-          </ul>
-        </li>
-        
-        <li>imports/ui/Footer.js:
-          <ul>
-            <li>modify Footer component to use the prop sent from the main</li>
-          </ul>
-        </li>
-      </ul>
-      <h2>Part 3: Require the footer prop as a string (vid 16a)</h2>
-    </>
+    </div>
     );
   }
 };
