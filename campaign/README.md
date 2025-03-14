@@ -5,8 +5,6 @@ GOALS
 
     To practice concepts as found in the videos/git repo
 
-        
-
 
         15a - first React: 
         15b - challenge - React component placeholder: 
