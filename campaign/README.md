@@ -1,13 +1,13 @@
 
-git Completed React Component chllngs for vids 15a, 15b
+git React Props Challenges for vids 16a - 16b
 
 GOALS
 
     To practice concepts as found in the videos/git repo
 
+        16a - React props: 
+        16b - challenge - add moderator name prop to titleBar: 
 
-        15a - first React: 
-        15b - challenge - React component placeholder: 
 
 INSTRUCTIONS
 
@@ -15,7 +15,7 @@ INSTRUCTIONS
 
 
 
-Stop runaway mongo on windows
+Stop runaway node or mongo on windows
 
 taskkill /f /im mongod.exe
 taskkill /f /im node.exe

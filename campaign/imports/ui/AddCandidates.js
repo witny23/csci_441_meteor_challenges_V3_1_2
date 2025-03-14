@@ -6,9 +6,9 @@ export default class AddCandidates extends React.Component {// jsx requires uppe
   //it is a render method - this returns the jsx that is returned to the screen
   render(){
     return (
-      <div>
+      <>
         <p>Add Candidates Component Placeholder</p>
-      </div>
+      </>
     )
   }
 

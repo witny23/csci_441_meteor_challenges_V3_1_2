@@ -1,5 +1,5 @@
 {
-  "name": "reddit",
+  "name": "candidates",
   "private": true,
   "scripts": {
     "start": "meteor run"
