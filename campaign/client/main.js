@@ -6,6 +6,7 @@ import {Candidates} from './../imports/api/candidates.js';
 import Instructions from '../imports/ui/Instructions.js'; // default export so no {}
 
 import TitleBar from './../imports/ui/TitleBar.js'; // default export so no {}
+import AddCandidates from './../imports/ui/AddCandidates.js';
 
 Meteor.subscribe("candidates_collection");
 
@@ -47,6 +48,7 @@ const processFormDataFunction = (event) => {
 };
 
 
+
 Meteor.startup(() => {
   Tracker.autorun(() => { 
 
@@ -67,7 +69,7 @@ Meteor.startup(() => {
           <input type='text' name='formInputNameAttrubute' placeholder='Candidate Name' />
           <button>Add Candidate</button>
         </form>
-        
+        <AddCandidates/>
         {renderCandidates(candidates)}
       </div>
     );
