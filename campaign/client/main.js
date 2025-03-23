@@ -4,15 +4,17 @@ import {Meteor} from 'meteor/meteor';
 import {Tracker} from 'meteor/tracker';
 import {Candidates} from './../imports/api/candidates.js'; 
 import Instructions from '../imports/ui/Instructions.js'; // default export so no {}
-
 import TitleBar from './../imports/ui/TitleBar.js'; // default export so no {}
-import AddCandidates from './../imports/ui/AddCandidates.js';
+import AddCandidates from './../imports/ui/AddCandidates.js'; // default export so no {}
+import Footer from './../imports/ui/Footer.js'; // default export so no {}
 
 Meteor.subscribe("candidates_collection");
 
 
 const renderCandidates = (candidateObject) => {
   let candidateInfo = candidateObject.map((candidate) => {
+
+{/* Part 3: Move the following to imports/ui/AddCandidates.js */}
     return (
       <p key={candidate._id}>
       <button onClick={() => { 
@@ -34,6 +36,7 @@ const renderCandidates = (candidateObject) => {
   return candidateInfo;
 };
 
+{/* Part 2: Move the following to imports/ui/AddCandidates.js */}
 const processFormDataFunction = (event) => {
   event.preventDefault();
   let candidateName = event.target.formInputNameAttrubute.value;
@@ -54,24 +57,24 @@ Meteor.startup(() => {
 
 
     let candidates = Candidates.find().fetch();
-    // let title = 'The big Campaign';
-
+    let title = 'The big Campaign';
+    footer_content = 'my footer';
     let jsx = (
-      <div>
+      <>
         <Instructions />
 
         <hr></hr>
-        {/********** swap out the old h1 with the TitleBar components  ***************/}
-        {/*<h1>{title}</h1>*/}
-        <TitleBar/>
-
+        <TitleBar title_prop={title}/>
+{/* Part 1: move the following form to imports/ui/AddCandidates.js */}
         <form onSubmit={processFormDataFunction}>
           <input type='text' name='formInputNameAttrubute' placeholder='Candidate Name' />
           <button>Add Candidate</button>
         </form>
+
         <AddCandidates/>
         {renderCandidates(candidates)}
-      </div>
+        <Footer footer_prop={footer_content}/>
+      </>
     );
     ReactDom.render(jsx, document.getElementById('content'));
   });

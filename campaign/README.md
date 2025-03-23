@@ -1,12 +1,17 @@
 
-git React Props Challenges for vids 16a - 16b
+git React props, bind, and require Challenges for vids 17a - 18c
 
 GOALS
 
     To practice concepts as found in the videos/git repo
 
-        16a - React props: 
-        16b - challenge - add moderator name prop to titleBar: 
+
+        17a - React - AddTopic render form and handle submit - wont work b/c …
+        17b - React.Component - AddTopic bind form onSubmit to event
+        18a - challenge 1 - create a topic component with dummy text
+        18b - challenge 2 - create a topic component with dynamic content
+        18c - challenge 3 - require the post_prop_obj
+
 
 
 INSTRUCTIONS
