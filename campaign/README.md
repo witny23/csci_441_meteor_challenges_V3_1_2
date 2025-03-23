@@ -1,14 +1,18 @@
 
-git Component Lists Challenge - vid 19a
+git JSX Conditionals and App Component Challenge - vids 20a-21a
 
 GOALS
 
-    Practice setting up a component that renders a list as created by another component
+    Practice JSX Conditionals
+    Practice setting up an App component that render other components (e.g., TitleBar, AddCandidates, CandidateList)
     
-    To practice concepts as found in the  videos/git repo
+    To practice concepts as found in the videos/git repo
 
 
-        19a - React - list components.mp4    
+        20a - jsx conditionals.mp4
+        21a - app component.mp4
+
+    
 
 
 INSTRUCTIONS
