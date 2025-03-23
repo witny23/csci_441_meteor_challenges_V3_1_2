@@ -1,9 +1,8 @@
 body {
   padding: 10px;
   font-family: sans-serif;
-  background: grey;
+  background: lightgrey;
 }
-
 tr, td, table {
   border: 1px solid black;
   padding: 5px;
