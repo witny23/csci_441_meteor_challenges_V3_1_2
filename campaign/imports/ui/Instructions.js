@@ -5,45 +5,36 @@ export default class Instructions extends React.Component{
     return (
     <>
       <h1>Instructions</h1>
-      <p>The purpose of these challenges is to practice develop a component (CandidateList) responsible 
-        for rendering a list from another component (Candidate).
+      <p>The purpose of these challenges is to practice sorting the candidates based on votes as returned
+        from the mongoDB
       </p>
-      <h2>Part 1: Move the functionality for rendering each candidate from client/main.js 
-        to a newly created CandidateList.js component (vid 19a)</h2>
-        <h3>Big Challenge - do so w/o looking at the detailed instructions below</h3>
-      <ul>
-        <li>create an imports/ui/CandidateList.js file and then in that file:
+      <h2>Part 1: Sorting the mongoDB entries (vid 22a)</h2>
+      <li>client/main.js:
           <ul>
-            <li>create a CandidateList component that returns 'candidate list placeholder'</li>
-          </ul>
-        </li>
-        <li>client/main.js:
-          <ul>
-            <li>import the exported CandidateList component and place the component just below the 
-              current candidate list (in the jsx variable) and verify that it works</li>
-            <li>The CandidateList component will need the candidates_in_db object. Therefore, create a candidate_prop
-              and use it to pass the candidates_in_db to the CandidateList component </li>
-          </ul>
-        </li>
-        <li>imports/ui/CandidateList.js:
-          <ul>
-            <li>import the Candidate component</li>
-            <li>from  client/main.js, copy the const renderCandidates = (candidateObject) =&gt; &#123;... 
-              named function to the Candidate list component</li>
-            <li>because the renderCandidates function is inside of the component object, it needs to be changed into a method
-              that can be called from within the component. To this end, alter as needed. hint -- renderCandidates() &#123;..., 
-              and candidateObject.map &gt; this.props.candidate_obj_prop.map
+            <li>Around line 15, modify let candidates_in_db = Candidates.find().fetch(); so that the 
+              candidates will be sorted by votes with the most on top.
             </li>
-            <li>replace placeholder with a call to the renderCandidates method</li>
-            <li>test to ensure that the list is rendering (possibly both lists if you copied vs removed the functionality from client/main.js)</li>
+            <li>Take a look at Candidate.js to see how Candidates mongoDB was altered with update 
+              and remove. Notice, two objects are passed in for the update. The candidate's id and their 
+              votes. In our case, we do not care about the id, we just want to order by votes when we 
+              use the find() function.
+            </li>
+            <li>Reference: <a href="https://docs.meteor.com/api/collections.html#sortspecifiers" target="_blank">
+                  Meteor Sort Specifiers</a></li>
           </ul>
         </li>
-      </ul>
-
-      <h2>Part 2: Require the candidate_obj_prop as an array in CandidateList.js </h2>
-      <ul>
-        <li>test to make sure it works</li>
-      </ul>
+        <li>mongoDB cmd line reference - a cmd line means to sort (won't work in your code but the same 
+          concepts are applied.
+          <ul>
+            <li>In a new terminal, check out what is in your mongoDB by entering meteor mongo. 
+              Once it is up and running, db.candidates_collection.find() will return your collection.
+            </li>
+            <li>db.candidates_collection.find().sort(&#123;votes: 1&#125;) will order the entries 
+              in ascending order</li>
+          </ul>
+        </li>
+      
+ 
     </>
     );
   }
