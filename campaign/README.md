@@ -1,16 +1,13 @@
 
-git mongoDB sorting Challenge - vid 22a
+git React Props Challenges for vids 16a - 16b: Solution
 
 GOALS
 
-    Practice sorting
-    
     To practice concepts as found in the videos/git repo
 
-       22a - mongoDB sorting.mp4
 
-    Docs: Meteor Sort Specifiers - https://docs.meteor.com/api/collections.html#sortspecifiers
-    
+        16a - React props
+        16b - challenge - add moderator name prop to titleBar
 
 
 INSTRUCTIONS

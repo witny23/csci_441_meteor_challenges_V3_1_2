@@ -1,29 +1,13 @@
-import React from 'react'; 
-import {Candidates} from './../api/candidates.js';
+import React from 'react'; // we need this for jsx and we are referencing React.components
 
-export default class AddCandidates extends React.Component {
 
-  processFormDataFunction(event){
-    event.preventDefault();
-    let candidateName = event.target.formInputNameAttrubute.value;
-  
-    if(candidateName){
-      event.target.formInputNameAttrubute.value = '';
-      Candidates.insert({
-          name: candidateName,
-          votes: 0,
-      });
-    };
-  };
-  
-
+export default class AddCandidates extends React.Component {// jsx requires uppercase when working with components
+  //by default react components only need to define one method and it is not the constructor
+  //it is a render method - this returns the jsx that is returned to the screen
   render(){
     return (
       <>
-        <form onSubmit={this.processFormDataFunction.bind(this)}>
-          <input type='text' name='formInputNameAttrubute' placeholder='Candidate Name' />
-          <button>Add Candidate</button>
-        </form>
+        <p>Add Candidates Component Placeholder</p>
       </>
     )
   }
