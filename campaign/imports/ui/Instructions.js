@@ -5,36 +5,76 @@ export default class Instructions extends React.Component{
     return (
     <>
       <h1>Instructions</h1>
-      <p>The purpose of these challenges is to practice sorting the candidates based on votes as returned
-        from the mongoDB
+      <p>The purpose of these challenges is to practice implementing scss techniques in our application
       </p>
-      <h2>Part 1: Sorting the mongoDB entries (vid 22a)</h2>
-      <li>client/main.js:
+      <h2>Part 1: Set up your style to use rem (root element's font size)units (vid 24a)</h2>
+      <li>client/main.scss:
           <ul>
-            <li>Around line 18, modify let candidates_in_db = Candidates.find().fetch(); so that the 
-              candidates will be sorted by votes with the most on top.
-            </li>
-            <li>Take a look at Candidate.js to see how Candidates mongoDB was altered with update 
-              and remove. Notice, two objects are passed in for the update. The candidate's id and their 
-              votes. In our case, we do not care about the id, we just want to order by votes when we 
-              use the find() function.
-            </li>
-            <li>Reference: <a href="https://docs.meteor.com/api/collections.html#sortspecifiers" target="_blank">
-                  Meteor Sort Specifiers</a></li>
+            <li>Perform a reset of the margin and padding (set to 0) for everything using the universal selector (*).</li>
+            <li>Set the font size of your html to 62.5% which is setting everying to be 10px</li>
+            <li>Set your body's font family, font color, and background color to anything you want.</li>
+            <li>Using rem, set the h1's font size to an appropriate size. </li>
+            <li>Set margin-left to 2 rem for list items</li>
           </ul>
-        </li>
-        <li>mongoDB cmd line reference - a cmd line means to sort (won't work in your code but the same 
-          concepts are applied.
+      </li>
+      <h2>Part 2: Stylize the TitleBar (vid 24a)</h2>
+      <li>client/main.scss:
           <ul>
-            <li>In a new terminal, check out what is in your mongoDB by entering meteor mongo. 
-              Once it is up and running, db.candidates_collection.find() will return your collection.
+            <li>Create a class for the title bar. Then:
+              <ul>
+                <li>provide a font and background color different than that set on the body</li>
+              </ul>
             </li>
-            <li>db.candidates_collection.find().sort(&#123;votes: 1&#125;) will order the entries 
-              in ascending order</li>
+            <li>Create another class to be used to center the title bar. Then:
+              <ul>
+                <li>center that class by using the margin / auto technique</li>
+                <li>limit the max width of contents in your class using rem (pick any size that is small enough to notice)</li>
+                <li>provide some padding using rem (just something that looks decent)</li>
+                <li>provide some background color (something different - it might not look great but this is for practice)</li>
+
+              </ul>
+            </li>
           </ul>
-        </li>
+      </li>
+      <li>imports/ui/TitleBar.js:
+          <ul>
+            <li>Apply your previously developed class for the titleBar color and background on the TitleBar using className</li>
+            <li>Use your centering class to center the titleBar</li>
+          </ul>
+      </li>
       
- 
+      <h2>Part 3: scss imports (vid 25a)</h2>
+      <li>Create a new imports/client/styles/_main.scss partial (note there are two directories)
+          <ul>
+            <li>cut everything out of the client/main.scss and paste it into this partial</li>
+          </ul>
+      </li>
+      
+      <li>client/main.scss:
+          <ul>
+            <li>import the imports/client/styles/_main.scss</li>
+            
+          </ul>
+      </li>
+      <li>Test to make sure your style loads</li>
+      <li>Create a new imports/client/styles/components/_titleBar.scss
+          <ul>
+            <li>Move the one class selector for the titleBar color and background located in _main.scss into this partial</li>
+          </ul>
+      </li>
+      <li>Create a new imports/client/styles/components/_wrapper.scss
+          <ul>
+            <li>Move the one class selectors for centering the titleBar located in _main.scss into this partial</li>
+          </ul>
+      </li>
+      <li>imports/client/styles/_main.scss
+          <ul>
+            <li>import the _titleBar.scss</li>
+            <li>import the _wrapper.scss</li>
+          </ul>
+      </li>
+      <li>Test to make sure your style loads</li>
+      <hr/><hr/>
     </>
     );
   }
