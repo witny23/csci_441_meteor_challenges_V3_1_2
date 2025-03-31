@@ -3,13 +3,6 @@ import Candidate from './Candidate.js';
 import PropTypes from 'prop-types';
 
 
-// const renderCandidates = (candidateObject) => {
-//     let candidateInfo = candidateObject.map((candidate) => {
-//       return <Candidate key={candidate._id} candidate_prop={candidate} />;
-//     });
-//     return candidateInfo;
-//   };
-
 export default class CandidateList extends React.Component {
 
     renderCandidates() {
@@ -22,7 +15,6 @@ export default class CandidateList extends React.Component {
   render(){
     return (
       <>
-        {/* <p>Candidate List Placeholder</p> */}
         {this.renderCandidates()}
       </>
     );

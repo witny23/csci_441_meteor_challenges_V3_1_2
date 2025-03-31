@@ -5,45 +5,51 @@ export default class Instructions extends React.Component{
     return (
     <>
       <h1>Instructions</h1>
-      <p>The purpose of these challenges is to practice develop a component (CandidateList) responsible 
-        for rendering a list from another component (Candidate).
+      <p>The purpose of these challenges is to practice jsx conditionals and to develop a 
+        component (app) responsible for rendering other components (i.e., TitleBar, AddCandidates, CandidateList).
       </p>
-      <h2>Part 1: Move the functionality for rendering each candidate from client/main.js 
-        to a newly created CandidateList.js component (vid 19a)</h2>
-        <h3>Big Challenge - do so w/o looking at the detailed instructions below</h3>
+      <h2>Part 1: JSX Conditionals (vid 20a)</h2>
+      <li>client/main.js:
+          <ul>
+            <li>in the Tracker.autorun, create a moderator variable (e.g., let moderator = 'Grace Hopper';)</li>
+            <li>Pass the moderator variable as a prop to the TitleBar component</li>
+          </ul>
+        </li>
+        <li>imports/ui/TitleBar.js:
+          <ul>
+            <li>In the TitleBar Component, create a renderModerator() method that checks for the 
+              existence of the moderator prop. Return the prop if it exists, return a "moderator unknown" if it does not.</li>
+            <li>update the render()'s return to include the moderator. </li>
+            <li>test as needed</li>
+          </ul>
+        </li>
+      
+      <h2>Part 2: Create App Component to render other components </h2>
       <ul>
-        <li>create an imports/ui/CandidateList.js file and then in that file:
+        <li>in the client/main.js file:
           <ul>
-            <li>create a CandidateList component that returns 'candidate list placeholder'</li>
-          </ul>
-        </li>
-        <li>client/main.js:
-          <ul>
-            <li>import the exported CandidateList component and place the component just below the 
-              current candidate list (in the jsx variable) and verify that it works</li>
-            <li>The CandidateList component will need the candidates_in_db object. Therefore, create a candidate_prop
-              and use it to pass the candidates_in_db to the CandidateList component </li>
-          </ul>
-        </li>
-        <li>imports/ui/CandidateList.js:
-          <ul>
-            <li>import the Candidate component</li>
-            <li>from  client/main.js, copy the const renderCandidates = (candidateObject) =&gt; &#123;... 
-              named function to the Candidate list component</li>
-            <li>because the renderCandidates function is inside of the component object, it needs to be changed into a method
-              that can be called from within the component. To this end, alter as needed. hint -- renderCandidates() &#123;..., 
-              and candidateObject.map &gt; this.props.candidate_obj_prop.map
+            <li>move/copy the jsx variable's components (i.e., TitleBar, AddCandidates, CandidateList) 
+              to the App Component's return statement</li>
+            <li>In ReactDom.render(jsx,... change jsx to your app component. Pass all the props that were 
+              previously passed to TitleBar, AddCandidates, and CandidateList to the App Component
             </li>
-            <li>replace placeholder with a call to the renderCandidates method</li>
-            <li>test to ensure that the list is rendering (possibly both lists if you copied vs removed the functionality from client/main.js)</li>
           </ul>
         </li>
       </ul>
-
-      <h2>Part 2: Require the candidate_obj_prop as an array in CandidateList.js </h2>
       <ul>
-        <li>test to make sure it works</li>
+        <li>in the imports/ui/App.js file:
+          <ul>
+            <li>Update the props being passed to the TitleBar, AddCandidates, and CandidateList Components.
+              Hint -- these props are being passed from client/main.js and need to be passed on to their
+              respective components
+            </li>
+            <li>test to make sure everything works</li>
+          </ul>
+        </li>
       </ul>
+      <hr></hr>
+
+ 
     </>
     );
   }
