@@ -2,12 +2,12 @@ import {Meteor} from 'meteor/meteor';
 import {Candidates} from './../imports/api/candidates.js';
 
 
-// convert the following line into an ES6 function
+
 Meteor.publish("candidates_collection", () => {
   return Candidates.find();
 });
 
-// convert the following line into an ES6 function
+
 Meteor.startup(async () => {
 
 
