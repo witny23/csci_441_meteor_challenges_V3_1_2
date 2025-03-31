@@ -46,20 +46,28 @@ export default class Instructions extends React.Component{
       <h2>Part 3: scss imports (vid 25a)</h2>
       
       <li>Create a new components directory in imports/client/styles</li>
-      <li>Create a new imports/client/styles/<strong>components</strong>/_titleBar.scss
+      <li>Create a new imports/client/styles/<strong>components/_reset.scss</strong>
+          <ul>
+            <li>Move everything from <strong>Part 1</strong> into this partial</li>
+          </ul>
+      </li>
+      <li>Create a new imports/client/styles/<strong>components/_titleBar.scss</strong>
           <ul>
             <li>Move the class selector for the titleBar's color and background located in main.scss into this partial</li>
           </ul>
       </li>
-      <li>Create a new imports/client/styles/<strong>components</strong>/_wrapper.scss
+      <li>Create a new imports/client/styles/<strong>components/_wrapper.scss</strong>
           <ul>
             <li>Move the class selector for centering the titleBar located in main.scss into this partial</li>
           </ul>
       </li>
       <li>imports/client/styles/main.scss
           <ul>
-            <li>import the _titleBar.scss (hint <strong>@use ./components/...</strong> the ./ indicates to start in current folder)</li>
+            <li>import the _reset.scss (hint <strong>@use ./components/...</strong> the ./ indicates to start in current folder)</li>
+
+            <li>import the _titleBar.scss</li>
             <li>import the _wrapper.scss</li>
+            <li>The previous three lines should be the only thing in your main.scss</li>
           </ul>
       </li>
       <li>Test to make sure your style loads</li>
