@@ -1,0 +1,18 @@
+/* 
+
+This is the old way to style. 
+
+To use SCSS - head to imports/client/styles/main.scss
+
+Note - the client/main.html file now has:
+           <link rel="stylesheet" href="/main.css">
+
+body {
+  padding: 10px;
+  font-family: sans-serif;
+  background: lightgrey;
+}
+tr, td, table {
+  border: 1px solid black;
+  padding: 5px;
+} */
