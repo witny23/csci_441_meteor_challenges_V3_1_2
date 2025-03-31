@@ -58,7 +58,7 @@ export default class Instructions extends React.Component{
       </li>
       <li>imports/client/styles/main.scss
           <ul>
-            <li>import the _titleBar.scss</li>
+            <li>import the _titleBar.scss (hint <strong>@use ./components/...</strong> the ./ indicates to start in current folder)</li>
             <li>import the _wrapper.scss</li>
           </ul>
       </li>
