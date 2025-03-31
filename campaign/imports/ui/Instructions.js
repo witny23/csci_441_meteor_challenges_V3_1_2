@@ -5,50 +5,35 @@ export default class Instructions extends React.Component{
     return (
     <>
       <h1>Instructions</h1>
-      <p>The purpose of these challenges is to practice jsx conditionals and to develop a 
-        component (app) responsible for rendering other components (i.e., TitleBar, AddCandidates, CandidateList).
+      <p>The purpose of these challenges is to practice sorting the candidates based on votes as returned
+        from the mongoDB
       </p>
-      <h2>Part 1: JSX Conditionals (vid 20a)</h2>
+      <h2>Part 1: Sorting the mongoDB entries (vid 22a)</h2>
       <li>client/main.js:
           <ul>
-            <li>in the Tracker.autorun, create a moderator variable (e.g., let moderator = 'Grace Hopper';)</li>
-            <li>Pass the moderator variable as a prop to the TitleBar component</li>
+            <li>Around line 18, modify let candidates_in_db = Candidates.find().fetch(); so that the 
+              candidates will be sorted by votes with the most on top.
+            </li>
+            <li>Take a look at Candidate.js to see how Candidates mongoDB was altered with update 
+              and remove. Notice, two objects are passed in for the update. The candidate's id and their 
+              votes. In our case, we do not care about the id, we just want to order by votes when we 
+              use the find() function.
+            </li>
+            <li>Reference: <a href="https://docs.meteor.com/api/collections.html#sortspecifiers" target="_blank">
+                  Meteor Sort Specifiers</a></li>
           </ul>
         </li>
-        <li>imports/ui/TitleBar.js:
+        <li>mongoDB cmd line reference - a cmd line means to sort (won't work in your code but the same 
+          concepts are applied.
           <ul>
-            <li>In the TitleBar Component, create a renderModerator() method that checks for the 
-              existence of the moderator prop. Return the prop if it exists, return a "moderator unknown" if it does not.</li>
-            <li>update the render()'s return to include the moderator. </li>
-            <li>test as needed</li>
+            <li>In a new terminal, check out what is in your mongoDB by entering meteor mongo. 
+              Once it is up and running, db.candidates_collection.find() will return your collection.
+            </li>
+            <li>db.candidates_collection.find().sort(&#123;votes: 1&#125;) will order the entries 
+              in ascending order</li>
           </ul>
         </li>
       
-      <h2>Part 2: Create App Component to render other components </h2>
-      <ul>
-        <li>in the client/main.js file:
-          <ul>
-            <li>move/copy the jsx variable's components (i.e., TitleBar, AddCandidates, CandidateList) 
-              to the App Component's return statement</li>
-            <li>In ReactDom.render(jsx,... change jsx to your app component. Pass all the props that were 
-              previously passed to TitleBar, AddCandidates, and CandidateList to the App Component
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <ul>
-        <li>in the imports/ui/App.js file:
-          <ul>
-            <li>Update the props being passed to the TitleBar, AddCandidates, and CandidateList Components.
-              Hint -- these props are being passed from client/main.js and need to be passed on to their
-              respective components
-            </li>
-            <li>test to make sure everything works</li>
-          </ul>
-        </li>
-      </ul>
-      <hr></hr>
-
  
     </>
     );

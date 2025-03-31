@@ -1,18 +1,16 @@
 
-git JSX Conditionals and App Component Challenge - vids 20a-21a: Solution
+git mongoDB sorting Challenge - vid 22a: Solution
 
 GOALS
 
-    Practice JSX Conditionals
-    
-    Practice setting up an App component that render other components (e.g., TitleBar, AddCandidates, CandidateList)
+    Practice sorting
     
     To practice concepts as found in the videos/git repo
 
 
-        20a - jsx conditionals.mp4
-        21a - app component.mp4
+       22a - mongoDB sorting.mp4
 
+    Docs: Meteor Sort Specifiers - https://docs.meteor.com/api/collections.html#sortspecifiers
     
 
 
