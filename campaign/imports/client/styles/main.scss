@@ -1,7 +1,4 @@
-/* the following can be used for testing purposes 
-* {
-    background: lightgrey;
-  }
-*/
-
+@use './base/_reset.scss';  //  ./ indicates to start in current folder
+@use './components/_titleBar.scss';  //  ./ indicates to start in current folder
+@use './components/_wrapper.scss';
 
