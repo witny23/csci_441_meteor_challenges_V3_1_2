@@ -26,7 +26,7 @@ export default class Instructions extends React.Component{
             
           </ul>
       </li>
-      <li>imports/client/styles/_main.scss
+      <li>imports/client/styles/main.scss
           <ul>
             <li>import _singleItem.scss</li>
           </ul>
