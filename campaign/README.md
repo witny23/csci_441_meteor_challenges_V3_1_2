@@ -1,5 +1,5 @@
 
-git scss Challenge: vid 23a - 25a solution
+git scss and scss imports Challenge: vid 26a
 
 GOALS
 
@@ -8,9 +8,7 @@ GOALS
     To practice concepts as found in the videos/git repo
 
 
-        vid 23a - scss intro.mp4
-        vid 24a - scss style header.mp4
-        vid 25a - scss imports.mp4
+        vid 26a - scss form and topic style
 
     Docs: 
     SASS Basics: http://sass-lang.com/guide
