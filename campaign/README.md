@@ -1,5 +1,5 @@
 
-git vid 29a (28a-30a): BEM Challenge
+git vid 29a (28a-30a): BEM Challenge Solution
 
 GOALS
 

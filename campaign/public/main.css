@@ -26,6 +26,11 @@ li {
   color: blue;
 }
 
+.title-bar__moderator {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
 .wrapper {
   margin: 0 auto;
   max-width: 50rem;
