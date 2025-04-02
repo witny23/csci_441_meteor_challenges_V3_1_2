@@ -5,37 +5,20 @@ export default class Instructions extends React.Component{
     return (
     <div className='content'>
       <h1>Instructions</h1>
-      <p>The purpose of these challenges is to practice implementing scss techniques in our application
+      <p>The purpose of these challenges is to practice implementing BEM techniques in our application
       </p>
-      <h2>Part 1: Create a footer component  (vid 27a) </h2>
+      <h2>Part 1: Stylize the titleBar  (vid 29a) </h2>
       <ul>
-        <li>Create an imports/ui/Footer.js file. In that file:
+        <li>imports/client/styles/components/_titlebar.scss
           <ul>
-            <li>create a class component that returns a footer that originated in the client/main.js</li>
-            <li>require the footer text prop to be a string</li>
+            <li>using bem, create a moderator element to be used in titleBar.js</li>
+            <li>set the font size to 11 px using rem and font-weight to 300</li>
+            <li>apply the class to imports/ui/TitleBar.js &lt;p&gt; moderator (known and unknown)</li>
           </ul>
         </li>
-        <li>client/main.js
-            <ul>
-              <li>pass a footer prop of "The great campaign!" (or something similar) to the App component</li>
-            </ul>
-        </li>
-        <li>imports/ui/App.js
-            <ul>
-              <li>write the code needed to have the app component render the footer component</li>
-            </ul>
-        </li>
+
       </ul>
-      <h2>Part 2: Stylize the footer component (vid 27a)</h2>
-      <ul>
-        <li>Create an imports/client/styles/components/_footer.scss partial
-            <ul>
-              <li>Create a class selector to be used to color the footer </li>
-              <li>Create a class selector to be used to center the footer and make it the same width as the form/list</li>
-            </ul>
-        </li>
-        <li>Write the code needed to apply the partial's style to the footer.</li>
-      </ul>
+
       <hr/><hr/>
     </div>
     );

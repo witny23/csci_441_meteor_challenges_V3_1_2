@@ -8,8 +8,8 @@ export default class CandidateList extends React.Component {
     renderCandidates() {
       if (this.props.candidate_obj_prop.length === 0){
         return (
-          <div className='singleItemStyle'>
-            <p>Add a new candidate to get started</p>
+          <div className='single-block-item-style'>
+            <p className = 'single-block-item-style__message'>Add a new candidate to get started</p>
           </div>
         );
       } else {

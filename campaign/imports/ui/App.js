@@ -16,8 +16,8 @@ export default class App extends React.Component {
         <div className='wrapper'>
           <AddCandidates/>
           <CandidateList candidate_obj_prop={this.props.main_candidate_obj_prop}/>
-          <Footer footer_obj_prop={this.props.main_footer_obj_prop} />
         </div>
+        <Footer footer_obj_prop={this.props.main_footer_obj_prop} />
       </>
 
     );

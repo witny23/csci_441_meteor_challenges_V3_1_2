@@ -5,15 +5,15 @@ import {Candidates} from './../api/candidates.js';
 export default class Candidate extends React.Component{
   render(){
     return (
-        <div className='singleItemStyle'
+        <div className='single-block-item-style'
              key={this.props.candidate_prop._id}>
-            <button onClick={() => { 
+            <button className='button button--round' onClick={() => { 
                 Candidates.remove({_id: this.props.candidate_prop._id})
             }}>X</button> 
-            <button onClick={() => { 
+            <button className='button button--round' onClick={() => { 
                 Candidates.update({_id: this.props.candidate_prop._id}, {$inc: {votes: 1}})
             }}>+1</button> 
-            <button onClick={() => {  
+            <button className='button button--round' onClick={() => {  
                 Candidates.update({_id: this.props.candidate_prop._id}, {$inc: {votes: -1}})
             }}>-1</button>
     

@@ -1,19 +1,20 @@
 
-git vid 27a: Component / scss Challenge Solution
+git vid 29a (28a-30a): BEM Challenge
 
 GOALS
 
     Practice scss and scss imports
-    
+
     To practice concepts as found in the videos/git repo
 
 
-        vid 26a - scss form and topic style
+        vid 28a - bem - block element modifier intro.mp4
+        vid 29a - bem continued.mp4
+        vid 30a - challenge - bem.mp4
+
 
     Docs: 
-    SASS Basics: http://sass-lang.com/guide
-    SASS Import: https://sass-lang.com/documentation/at-rules/import
-    SASS Modules:  https://sass-lang.com/guide#topic-5 
+        BEM Naming conventions: https://en.bem.info/methodology/naming-convention/
     
 
 
