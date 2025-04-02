@@ -45,12 +45,15 @@ export default class Instructions extends React.Component{
       
       <h2>Part 3: scss imports (vid 25a)</h2>
       
-      <li>Create a new components directory in imports/client/styles</li>
-      <li>Create a new imports/client/styles/<strong>components/_reset.scss</strong>
+      <li>Create a new <strong>base</strong> directory in imports/client/styles
+        <ul><li>In web dev frameworks, the base folder in a project is typically used for foundational styles that serve as the base layer of the site's styling. These styles are usually generic, foundational rules that create a consistent, clean slate for the rest of the site's design.</li></ul>
+      </li>
+      <li>Create a new imports/client/styles/<strong>base/_reset.scss</strong>
           <ul>
             <li>Move everything from <strong>Part 1</strong> into this partial</li>
           </ul>
       </li>
+      <li>Create a new <strong>components</strong> directory in imports/client/styles</li>
       <li>Create a new imports/client/styles/<strong>components/_titleBar.scss</strong>
           <ul>
             <li>Move the class selector for the titleBar's color and background located in main.scss into this partial</li>
