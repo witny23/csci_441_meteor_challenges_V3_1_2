@@ -1,5 +1,5 @@
 
-git vid 26a: scss and scss imports Challenge
+git vid 26a: scss and scss imports Challenge Solution
 
 GOALS
 

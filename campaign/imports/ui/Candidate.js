@@ -5,7 +5,8 @@ import {Candidates} from './../api/candidates.js';
 export default class Candidate extends React.Component{
   render(){
     return (
-        <p key={this.props.candidate_prop._id}>
+        <div className='singleItemStyle'
+             key={this.props.candidate_prop._id}>
             <button onClick={() => { 
                 Candidates.remove({_id: this.props.candidate_prop._id})
             }}>X</button> 
@@ -17,7 +18,7 @@ export default class Candidate extends React.Component{
             }}>-1</button>
     
             {' ' + this.props.candidate_prop.name} has {this.props.candidate_prop.votes} vote[s] {' '}
-        </p>
+        </div>
         
       );
   }

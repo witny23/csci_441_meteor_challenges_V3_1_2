@@ -19,12 +19,12 @@ export default class AddCandidates extends React.Component {
 
   render(){
     return (
-      <>
+      <div className='singleItemStyle'>
         <form onSubmit={this.processFormDataFunction.bind(this)}>
           <input type='text' name='formInputNameAttrubute' placeholder='Candidate Name' />
           <button>Add Candidate</button>
         </form>
-      </>
+      </div>
     )
   }
 
