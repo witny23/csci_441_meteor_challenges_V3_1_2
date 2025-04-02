@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Instructions from './Instructions.js';
-
 import TitleBar from './TitleBar.js';
 import AddCandidates from './AddCandidates.js';
 import CandidateList from './CandidateList.js';
+import Footer from './Footer.js';
 
 export default class App extends React.Component {
   render(){
@@ -16,6 +16,7 @@ export default class App extends React.Component {
         <div className='wrapper'>
           <AddCandidates/>
           <CandidateList candidate_obj_prop={this.props.main_candidate_obj_prop}/>
+          <Footer footer_obj_prop={this.props.main_footer_obj_prop} />
         </div>
       </>
 

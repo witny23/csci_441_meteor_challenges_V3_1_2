@@ -48,3 +48,15 @@ li {
 ul {
   margin-left: 2rem;
 }
+
+.footer {
+  color: white;
+}
+
+.footer-wrapper {
+  margin: 0 auto;
+  max-width: 50rem;
+  padding: 1.3rem;
+  background-color: blue;
+  margin-top: 0.5rem;
+}

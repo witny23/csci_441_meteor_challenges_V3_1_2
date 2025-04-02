@@ -18,10 +18,13 @@ Meteor.startup(() => {
     let candidates_in_db = Candidates.find({}, {sort: {votes: -1}}).fetch();
     let title = 'The big Campaign';
     let moderator = 'Grace Hopper';
+    let footer = 'The great campaign!';
 
     ReactDom.render(<App  main_title_prop={title} 
                           main_moderator_prop={moderator} 
-                          main_candidate_obj_prop={candidates_in_db}/>, 
+                          main_candidate_obj_prop={candidates_in_db}
+                          main_footer_obj_prop={footer}
+                          />, 
                         document.getElementById('content'));
   });
 
