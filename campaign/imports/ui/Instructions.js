@@ -3,7 +3,7 @@ import React from 'react';
 export default class Instructions extends React.Component{ 
   render(){
     return (
-    <div class='content'>
+    <div className='content'>
       <h1>Instructions</h1>
       <p>The purpose of these challenges is to practice implementing scss techniques in our application
       </p>
