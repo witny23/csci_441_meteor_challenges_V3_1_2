@@ -39,3 +39,12 @@ li {
   margin-top: 0.5rem;
   padding: 1.3rem;
 }
+
+.content {
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+}
+
+ul {
+  margin-left: 2rem;
+}
