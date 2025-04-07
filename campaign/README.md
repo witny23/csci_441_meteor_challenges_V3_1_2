@@ -1,5 +1,5 @@
 
-vid 31a: Stylize the Candidate Challenge - Solution
+vid 32a + 33a: react-flip-move & object spread: Challenge - start
 
 GOALS
 
@@ -8,12 +8,13 @@ GOALS
     To practice concepts as found in the videos/git repo
 
 
-        gitHub 31a - flexbox.mp4: 
+        gitHub 32a - third party React components (react-flip-move).mp4
+        gitHub 33a - ES6 intro to object spread operator & object property shorthand.mp4
 
     Docs: 
-        CSS Flexible Box Layout: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout
-        
-        justify-content: https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
+        React Flip Move: https://www.npmjs.com/package/react-flip-move
+        meteor npm i react-flip-move
+    
     
 
 

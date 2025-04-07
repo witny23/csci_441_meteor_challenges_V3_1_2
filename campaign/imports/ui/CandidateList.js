@@ -1,6 +1,7 @@
 import React from 'react';
 import Candidate from './Candidate.js';
 import PropTypes from 'prop-types';
+import FlipMove from 'react-flip-move';
 
 
 export default class CandidateList extends React.Component {
@@ -24,7 +25,13 @@ export default class CandidateList extends React.Component {
   render(){
     return (
       <>
-        {this.renderCandidates()}
+        <FlipMove delay={500 /* this is in milliseconds */}
+            leaveAnimation='accordionVertical'
+            maintainContainerHeight={true} /*stops the footer from
+                                            hopping on top of the last
+                                            topic when it is removed*/ >
+          {this.renderCandidates()}
+        </FlipMove>
       </>
     );
   }
