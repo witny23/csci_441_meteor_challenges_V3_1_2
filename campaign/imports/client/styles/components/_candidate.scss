@@ -1,15 +1,21 @@
 .candidate {
-
-    
+    display: flex;
+    //  justify-content: center;  // lets you specify where the elements are positioned
+    //  justify-content: space-around;  // even space before, between, and after
+    justify-content: space-between;  // take leftover space and put it in the middle
 }
 .candidate__name {
-
-    
+    font-weight: 400;
+    font-size: 2.0rem;
 }
 
 .candidate__votes {
-
-    
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 300;
+    text-decoration: underline;
 }
 
-
+.candidate__actions {
+    flex-shrink: 0; // never shrink the item no matter how big the other stuff gets  
+}

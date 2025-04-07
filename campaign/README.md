@@ -1,5 +1,5 @@
 
-vid 31a: Stylize the Candidate Challenge - Start
+vid 31a: Stylize the Candidate Challenge - Solution
 
 GOALS
 

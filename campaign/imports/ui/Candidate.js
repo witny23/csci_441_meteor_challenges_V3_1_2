@@ -8,8 +8,13 @@ export default class Candidate extends React.Component{
         
         <div className='single-block-item-style'
             key={this.props.candidate_prop._id}>
-                
-
+            <div className='candidate'>
+                <div>
+                    <h2 className='candidate__name'>{' ' + this.props.candidate_prop.name} </h2>
+                    
+                    <p className='candidate__votes'>has {this.props.candidate_prop.votes} vote[s] {' '}</p>
+                </div>
+                <div className='candidate__actions'>
                     <button className='button button--round' onClick={() => { 
                         Candidates.remove({_id: this.props.candidate_prop._id})
                     }}>X</button> 
@@ -19,11 +24,9 @@ export default class Candidate extends React.Component{
                     <button className='button button--round' onClick={() => {  
                         Candidates.update({_id: this.props.candidate_prop._id}, {$inc: {votes: -1}})
                     }}>-1</button>
-                    
+                </div>
 
-                    {' ' + this.props.candidate_prop.name} has {this.props.candidate_prop.votes} vote[s] {' '}
-                    
-            
+            </div>
         </div>   
       );
   }
