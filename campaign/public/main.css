@@ -37,7 +37,7 @@ li {
   padding: 1.3rem;
 }
 
-.singleItemStyle, .single-block-item-style {
+.single-block-item-style {
   background-color: white;
   border: 2px black solid;
   margin-top: 0.5rem;
@@ -97,4 +97,14 @@ ul {
   border-radius: 50%;
   height: 4rem;
   width: 4rem;
+}
+
+.form {
+  display: flex;
+}
+
+.form__input {
+  border: 1px solid grey;
+  padding: 1.3rem;
+  flex-grow: 1;
 }

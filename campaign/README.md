@@ -1,20 +1,19 @@
 
-git vid 29a (28a-30a): BEM Challenge Solution
+vid 31a: Stylize the Candidate Challenge - Start
 
 GOALS
 
     Practice scss and scss imports
-
+    
     To practice concepts as found in the videos/git repo
 
 
-        vid 28a - bem - block element modifier intro.mp4
-        vid 29a - bem continued.mp4
-        vid 30a - challenge - bem.mp4
-
+        gitHub 31a - flexbox.mp4: 
 
     Docs: 
-        BEM Naming conventions: https://en.bem.info/methodology/naming-convention/
+        CSS Flexible Box Layout: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout
+        
+        justify-content: https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
     
 
 

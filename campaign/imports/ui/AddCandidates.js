@@ -19,9 +19,9 @@ export default class AddCandidates extends React.Component {
 
   render(){
     return (
-      <div className='singleItemStyle'>
-        <form onSubmit={this.processFormDataFunction.bind(this)}>
-          <input type='text' name='formInputNameAttrubute' placeholder='Candidate Name' />
+      <div className='single-block-item-style'>
+        <form className='form' onSubmit={this.processFormDataFunction.bind(this)}>
+          <input className='form__input' type='text' name='formInputNameAttrubute' placeholder='Candidate Name' />
           <button className='button'>Add Candidate</button>
         </form>
       </div>
