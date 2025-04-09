@@ -53,6 +53,14 @@ input, button, select {
   text-align: center;
 }
 
+.single-block-item-style--position-1 {
+  background-color: #ffe766;
+}
+
+.single-block-item-style--position-2 {
+  background-color: rgb(204.75, 204.75, 204.75);
+}
+
 .content {
   margin-left: 0.5rem;
   padding: 0.5rem;

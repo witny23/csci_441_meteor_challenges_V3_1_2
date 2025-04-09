@@ -4,9 +4,13 @@ import {Candidates} from './../api/candidates.js';
 
 export default class Candidate extends React.Component{
   render(){
+    let single_item_class_name =
+        `single-block-item-style
+        single-block-item-style--position-${this.props.candidate_prop.rank}`;
+
     return (
         
-        <div className={'single-block-item-style'}
+        <div className={single_item_class_name}
             key={this.props.candidate_prop._id}>
             <div className='candidate'>
                 <div>

@@ -31,4 +31,15 @@
     font-weight: 300;
     text-align: center;
 }
+
+// challenge
+//  add two selectors for the two modifiers single-block-item-style--position-[1,2]
+//  set a different background-color for those two - gold, silver
+
+.single-block-item-style--position-1 {
+    background-color: vars.$gold;
+  }
+.single-block-item-style--position-2 {
+    background-color: vars.$silver;
+  }
       
