@@ -1,4 +1,4 @@
-vid 34a: classes and scss functions challenge - start
+vid 34a: classes and scss functions challenge - solution
 
 
 
