@@ -1,4 +1,15 @@
 @use "sass:color"; // Import the color module
 
-$gold: color.adjust(gold, $lightness: 20%);
-$silver: color.adjust(silver, $lightness: 5%);
+// https://sass-lang.com/documentation/modules/color#adjust
+ // https://www.w3schools.com/sass/sass_functions_color.php
+
+ $gold: color.adjust(rgb(255,215,0), $lightness: 20%);
+ $silver: color.adjust(rgb(192,192,192), $lightness: 10%);
+ $salmon: color.adjust(rgb(255,160,122), $lightness: 20%);
+ $lightblue: color.adjust(rgb(173,216,230), $lightness: 15%);
+ $lightgreen: color.adjust(rgb(144,238,144), $lightness: 20%);
+ $seagreen: color.adjust(rgb(46,139,87), $lightness: 5%);
+ $lightgrey: color.adjust(rgb(211,211,211), $lightness: 5%);
+ $darkgrey: color.adjust(rgb(169,169,169), $lightness: 5%);
+ 
+ $radius: 6px;

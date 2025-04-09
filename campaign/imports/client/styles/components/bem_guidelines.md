@@ -8,38 +8,31 @@
 // two rules of BEM - 1 always use classes
     // never going to use id or element selector (i.e., (#id, p)
 
-// 2 - pattern is as follows
+// 2 - patern is as follows
     // .block-class-name two underscores element-name
     // .some-item__element-name - example of multi word use
 
-    // modifier - pattern = blockName--some-modifier
-// {
-
-@use '../base/_variables.scss' as vars; // need access to the variables and name them vars
-
-.single-block-item-style {
+    // modifier - patern = blockName--some-modifier
+// 
+.single-block-item-style {  
     background-color: white;
     border: 2px black solid;
     margin-top: .5rem;
     padding: 1.3rem;
 }
     
-    .single-block-item-style__message {
-    color: seagreen;
+.single-block-item-style__message {     
+    color: $seagreen;
     font-size: 1.3rem;
     font-style: italic;
     font-weight: 300;
     text-align: center;
 }
 
-// challenge
-//  add two selectors for the two modifiers single-block-item-style--position-[1,2]
-//  set a different background-color for those two - gold, silver
-
-.single-block-item-style--position-1 {
-    background-color: vars.$gold;
+.single-block-item-style--position-1 {      
+    background-color: $gold;
   }
-.single-block-item-style--position-2 {
-    background-color: vars.$silver;
+.single-block-item-style--position-2 {     
+    background-color: $silver;
   }
-      
+     

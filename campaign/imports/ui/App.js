@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Instructions from './Instructions.js';
+import Instructions from './Z_Instructions.js';
 import TitleBar from './TitleBar.js';
-import AddCandidates from './AddCandidates.js';
+import CandidateAddAnother from './CandidateAddAnother.js';
 import CandidateList from './CandidateList.js';
 import Footer from './Footer.js';
 
@@ -10,14 +10,13 @@ export default class App extends React.Component {
   render(){
    return (
      <>
-        <Instructions />
-        {/* Return the TitleBar, AddCandidates, CandidateList with the appropriate props passed to the components  */}
-        <TitleBar title_prop={this.props.main_title_prop} moderator_prop={this.props.main_moderator_prop}/>
+        <Instructions /><br />
+        <TitleBar App_title_prop={this.props.main_title_prop} App_moderator_prop={this.props.main_moderator_prop}/>
         <div className='wrapper'>
-          <AddCandidates/>
-          <CandidateList candidate_obj_prop={this.props.main_candidate_obj_prop}/>
+          <CandidateAddAnother />
+          <CandidateList App_candidate_obj_prop={this.props.main_candidate_obj_prop}/>
         </div>
-        <Footer footer_obj_prop={this.props.main_footer_obj_prop} />
+        <Footer App_footer_obj_prop={this.props.main_footer_obj_prop} />
       </>
 
     );
@@ -25,7 +24,6 @@ export default class App extends React.Component {
 };
 
 App.propTypes = {
-    // this is going to throw an error then it will work.
     main_title_prop: PropTypes.string.isRequired,
     main_candidate_obj_prop: PropTypes.array.isRequired
   };

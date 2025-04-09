@@ -1,22 +1,13 @@
-vid 34a: classes and scss functions challenge - solution
-
-
+vid 35a: comment, link, and stylechallenge - start
 
 
 GOALS
 
-    practice with dynamic classes and scss functions
-    as found in the videos/git repo
+    practice with components, db comm and links
 
+    35a - video gitHub 35a - reply and link challenge.mp4
 
-    34a - dynamic classes and scss functions.mp4
-        
-
-
-
-
-
-
+    
 INSTRUCTIONS
 
     Found on main.html when program is running or in imports/ui/Instructions.js
