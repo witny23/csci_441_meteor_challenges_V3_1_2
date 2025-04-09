@@ -1,0 +1,3 @@
+@use "sass:color"; // Import the color module
+
+$gold: color.adjust(gold, $lightness: 20%);

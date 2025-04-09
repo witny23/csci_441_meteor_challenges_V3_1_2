@@ -16,13 +16,18 @@ export default class Instructions extends React.Component{
       <br />  
       <ul>
         <li>To do:<ul>
-          <li>Create gold and silver variables in imports/client/styles/base/_reset.scss</li>
-          <li>In the render() of imports/ui/Candidate.js class, create a variable that will be used to hold
-            the current class name of the first div and a class name that includes 
+          <li>Create gold and silver variables in imports/client/styles/base/_variables.scss
+            <ul>
+              <li>I was working with color and I think the code might look something like: $blue: color.adjust(blue, $lightness: 20%);</li>
+            </ul>
+          </li>
+          <li>In the render() of imports/ui/Candidate.js, create a variable (i.e., single_item_class_name = ???) that will be used to hold
+            the current className of the first div (about line 9) and a class name that includes 
             the position of the candidate (don't forget the back ticks so I can use jsx).
           </li>
-          <li>In the imports/client/styles/base/_singleItem.scss partial, create two selectors (one for each position). Set the background
-            of the first one to gold and set the background of the second one to silver.
+          <li>In the imports/client/styles/base/_singleItem.scss partial, create two selectors (one for each position). Using the variables you created in 
+          imports/client/styles/base/_variables.scss, set the background
+            of the first position to gold and set the background of the second position to silver.
           </li>
           <li>Feeling sick and cant remember if there is something else to do. Maybe it was to lighten up 
             the colors with a function in an scss file.
