@@ -7,12 +7,12 @@ export const Candidates = new Mongo.Collection('candidates_collection');
                                 // candidates_collection will be the name of the collection
 
 
-export const Calculate_rank_and_position_for_candidates = (candidate_collection) => {
+export const Calculate_rank_and_position_for_candidates = (candidates_collection) => {
     // going to return a new candidates_collection array with new properties
     // rank is 1st, 2nd, etc, position is 1, 2, 3, etc
     // this will be called from client/main.js
     // remember, the candidates_collection is already in order (1st to last)
-    let rank = 0; // when we iterate the collection, the first has a rank of 1
+    let rank = 1; // when we iterate the collection, the first has a rank of 1
                     // we just need to increment by 1 for subsequent places
 
     return candidates_collection.map((candidate, index) => {

@@ -1,21 +1,20 @@
-vid 33b: rank and place challenge - start
+vid 34a: classes and scss functions challenge - start
+
+
 
 
 GOALS
 
-    Practice scss and scss imports
-    
-    To practice concepts as found in the videos/git repo
+    practice with dynamic classes and scss functions
+    as found in the videos/git repo
 
-        33b - calculate rank and position for posts with ES6.mp4
 
+    34a - dynamic classes and scss functions.mp4
         
 
-    Docs: 
-        Nmeral.js - http://numeraljs.com/
-        npm install numeral
-    
-    
+
+
+
 
 
 INSTRUCTIONS
