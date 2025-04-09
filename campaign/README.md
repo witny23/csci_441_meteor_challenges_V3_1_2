@@ -1,5 +1,4 @@
-
-vid 32a + 33a: react-flip-move & object spread: Challenge - start
+vid 32a + 33a: react-flip-move & object spread: Challenge - solution
 
 GOALS
 

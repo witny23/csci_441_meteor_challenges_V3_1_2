@@ -90,3 +90,13 @@ let language = 'Mandorin Chinese';
 
 //  make sure to use Object Spread Operator and Object Property Shorthand
 //    to recreate the previous object
+
+
+let country2 = {
+  ...country,
+  city: 'Beijing',
+  language,
+  population: 21540000
+}
+
+console.log(country2);
