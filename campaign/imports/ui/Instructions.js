@@ -5,16 +5,15 @@ export default class Instructions extends React.Component{
     return (
     <div className='content'>
       <h1>Instructions</h1>
-      <p>The purpose of these challenges is to practice implementing CSS Flexible Box Layout techniques in our application.
-        In addition, we will be practicing with object spread operator &amp; and its shorthand.
+      <p>The purpose of this challenges is to debug and complete code using knowledge gained and lessons learned up to this point.
       </p>
-      <h2>Part 1: Flip move  (vid 32a) </h2>
-      <p>Go through the FlipMove documentation (<a href='https://github.com/joshwcomeau/react-flip-move/blob/master/documentation/api_reference.md' 
-      target='blank'>https://www.npmjs.com/package/react-flip-move</a>) and implement an animation that you think would be cool on the
-      candidate list.</p>
-      
-      <h2>Part 2: ES6 intro to object spread operator &amp; object property shorthand  (vid 33a) </h2>
-      <p>Take a look at the challenge in server/main.js</p>
+      <h2>Part 1: Rank and position  (vid 33b) </h2>
+      <p>A team member of yours has fallen ill. They intended to replicate the following image but hadn't 
+          completed their work. Since you are awesome, your task is to debug their code and finish their work. 
+          The following is an image of their vision for implementing rank and place. Don't forget, the console 
+          is a great resource when debugging.
+      </p><br />
+      <img src='images/rank_place.jpg' alt='representation of rank and place added to candidates' />
       <br></br><br></br><hr/><hr/>
     </div>
     );

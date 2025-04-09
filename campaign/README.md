@@ -1,18 +1,21 @@
-vid 32a + 33a: react-flip-move & object spread: Challenge - solution
+vid 33ba: rank and place challenge - start
+
 
 GOALS
 
     Practice scss and scss imports
     
-    To practice concepts as found in the videos/git repo
+    To practice concepts as found in the following videos/git repo
 
+        https://github.com/witny23/441_meteor_lecture_project.git
 
-        gitHub 32a - third party React components (react-flip-move).mp4
-        gitHub 33a - ES6 intro to object spread operator & object property shorthand.mp4
+        33b - calculate rank and position for posts with ES6.mp4: git checkout 5daa118c53df3169583b30e5a49c8bb2b31e96f1
+
+        
 
     Docs: 
-        React Flip Move: https://www.npmjs.com/package/react-flip-move
-        meteor npm i react-flip-move
+        Nmeral.js - http://numeraljs.com/
+        npm install numeral
     
     
 
