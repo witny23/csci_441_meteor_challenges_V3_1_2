@@ -1,13 +1,25 @@
-vid 35a: comment, link, and stylechallenge - start
+vid 33ba: rank and place challenge - solution
 
 
 GOALS
 
-    practice with components, db comm and links
-
-    35a - video gitHub 35a - reply and link challenge.mp4
-
+    Practice scss and scss imports
     
+    To practice concepts as found in the following videos/git repo
+
+        https://github.com/witny23/441_meteor_lecture_project.git
+
+        33b - calculate rank and position for posts with ES6.mp4: git checkout 5daa118c53df3169583b30e5a49c8bb2b31e96f1
+
+        
+
+    Docs: 
+        Nmeral.js - http://numeraljs.com/
+        npm install numeral
+    
+    
+
+
 INSTRUCTIONS
 
     Found on main.html when program is running or in imports/ui/Instructions.js

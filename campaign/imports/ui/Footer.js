@@ -7,7 +7,7 @@ export default class Footer extends React.Component{
     return (
       <div className='footer'>
         <div className='footer-wrapper'>{/* if we used wrapper, bg would be grey */}
-          <p>{this.props.App_footer_obj_prop}</p>
+          <p>{this.props.footer_obj_prop}</p>
         </div>
       </div>
     );
@@ -15,5 +15,5 @@ export default class Footer extends React.Component{
 };
 
 Footer.propTypes = {
-  App_footer_obj_prop: PropTypes.string.isRequired,
+    footer_obj_prop: PropTypes.string.isRequired,
 };

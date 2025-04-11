@@ -4,9 +4,9 @@
 
 @use './components/_titleBar.scss';  //  ./ indicates to start in current folder
 @use './components/_wrapper.scss';
+@use './components/_singleItem.scss';
 @use './components/_instructions.scss';
 @use './components/_footer.scss';
-@use './components/_candidateForm.scss';
-@use './components/_commentForm.scss';
+@use './components/_button.scss';
+@use './components/_form.scss';
 @use './components/_candidate.scss';
-@use './components/_comment.scss';
