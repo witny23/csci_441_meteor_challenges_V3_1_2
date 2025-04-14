@@ -1,7 +1,9 @@
-.wrapper{
-  margin: 0 auto;
-  max-width: 50rem; // 500px based off the unit sizing
-  padding: 1.3rem;  // 13px
-  background-color: darkgrey;
-}
-  
+@use '../base/_variables.scss' as vars; // need access to the variables and name them vars
+
+.wrapper{ 
+    margin: 0 auto;
+    max-width: 50rem; // 500px based off the unit sizing
+    padding: 1.3rem;  // 13px
+    background-color: vars.$darkgrey;
+    border-radius: vars.$radius vars.$radius 0px 0px;
+  }

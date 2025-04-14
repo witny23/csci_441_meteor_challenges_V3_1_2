@@ -1,44 +1,33 @@
 @use '../base/_variables.scss' as vars; // need access to the variables and name them vars
 
 
-.candidate-container {  
+.comment-container {  
   background-color: white;
   border: 2px black solid;
   border-radius: vars.$radius;
   margin-top: .5rem;
   padding: 1.3rem;
   }
-.candidate-container__margin-left {
-  margin-left: 15px;
-}
-.candidate-container__candidate-element {         
+
+.comment-container__topic-element {  
   display: flex;
-    //  justify-content: center;  // lets you specify where the elements are positioned
-    //  justify-content: space-around;  // even space before, between, and after
-  justify-content: space-between;  // take leftover space and put it in the middle
+  //  justify-content: center;  // lets you specify where the elements are positioned
+  //  justify-content: space-around;  // even space before, between, and after
+  justify-content: space-between;;  // take leftover space and put it in the middle
+  
 }
-.candidate-container__no-candidates-message {     
-  color: vars.$seagreen;
+
+.comment-container__stats {            
   font-size: 1.3rem;
   font-style: italic;
   font-weight: 300;
-  text-align: center;
 }
-.candidate-container__candidate-name {         
-  font-weight: 400;
-  font-size: 2.0rem;
-}
-
-.candidate-container__votes {        
-  font-size: 1.6rem;
-  font-style: italic;
-  font-weight: 300;
+  
+.comment-container__actions {          
+  flex-shrink: 0; // never shrink the item no matter how big the other stuff gets
 }
 
-.candidate-container__actions {      
-    flex-shrink: 0; // never shrink the item no matter how big the other stuff gets  
-}
-.candidate-container__candidate-action-buttons {               
+.comment-container__comment-action-buttons {              
   color: green;
   background-color: vars.$lightblue;
   border: 1px solid grey;
@@ -62,16 +51,15 @@
   }
 }
   
-
-.candidate-container__candidate-action-buttons--round {                   
+.comment-container__comment-action-buttons--round {                    
   border-radius: 50%; // perfect circle
   height: 4rem;
   width: 4rem;
 }
 
-.candidate-container--position-1 {     
-  background-color: vars.$gold;
+.comment-container--position-1 {      
+  background-color: vars.$lightblue
 }
-.candidate-container--position-2 {      
-  background-color: vars.$silver;
+.comment-container--position-2 {       
+  background-color: vars.$lightgreen;
 }

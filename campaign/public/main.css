@@ -35,31 +35,23 @@ input, button, select {
   margin: 0 auto;
   max-width: 50rem;
   padding: 1.3rem;
-  background-color: darkgrey;
-}
-
-.single-block-item-style {
-  background-color: white;
-  border: 2px black solid;
-  margin-top: 0.5rem;
-  padding: 1.3rem;
-}
-
-.single-block-item-style__message {
-  color: seagreen;
-  font-size: 1.3rem;
-  font-style: italic;
-  font-weight: 300;
-  text-align: center;
+  background-color: rgb(181.75, 181.75, 181.75);
+  border-radius: 6px 6px 0px 0px;
 }
 
 .content {
   margin-left: 0.5rem;
   padding: 0.5rem;
+  border: 1px grey solid;
+  overflow: auto;
 }
 
 ul {
   margin-left: 2rem;
+}
+
+.float_right {
+  float: right;
 }
 
 .footer {
@@ -71,11 +63,134 @@ ul {
   max-width: 50rem;
   padding: 1.3rem;
   background-color: blue;
+  border-radius: 0px 0px 6px 6px;
 }
 
-.button {
+.candidate-addition-container {
+  background-color: white;
+  border: 2px black solid;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  padding: 1.3rem;
+}
+
+.candidate-addition-container__form {
+  display: flex;
+}
+
+.candidate-addition-container__input {
+  border: 1px solid grey;
+  border-radius: 6px 0px 0px 6px;
+  padding: 1.3rem;
+  flex-grow: 1;
+}
+
+.candidate-addition-container__add-candidate-button {
   color: green;
-  background-color: lightblue;
+  background-color: rgb(231.6261682243, 243.8831775701, 247.8738317757);
+  border: 1px solid grey;
+  border-radius: 0px 6px 6px 0px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 1.1rem;
+  padding: 1.1rem;
+  outline: none;
+  transition: background 0.5s ease;
+}
+.candidate-addition-container__add-candidate-button:hover, .candidate-addition-container__add-candidate-button:focus {
+  background: blue;
+  color: grey;
+}
+.candidate-addition-container__add-candidate-button:active {
+  background: white;
+  transition: transform 1s ease;
+  transform: scale(1.3);
+}
+
+.comment-addition-container {
+  background-color: white;
+  border: 2px black solid;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  padding: 1.3rem;
+}
+
+.comment-addition-container__form {
+  display: flex;
+}
+
+.comment-addition-container__input {
+  border: 1px solid grey;
+  border-radius: 6px 0px 0px 6px;
+  padding: 1.3rem;
+  flex-grow: 1;
+}
+
+.comment-addition-container__add-comment-button {
+  color: green;
+  background-color: rgb(231.6261682243, 243.8831775701, 247.8738317757);
+  border: 1px solid grey;
+  border-radius: 0px 6px 6px 0px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 1.1rem;
+  padding: 1.1rem;
+  outline: none;
+  transition: background 0.5s ease;
+}
+.comment-addition-container__add-comment-button:hover, .comment-addition-container__add-comment-button:focus {
+  background: blue;
+  color: grey;
+}
+.comment-addition-container__add-comment-button:active {
+  background: white;
+  transition: transform 1s ease;
+  transform: scale(1.3);
+}
+
+.candidate-container {
+  background-color: white;
+  border: 2px black solid;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  padding: 1.3rem;
+}
+
+.candidate-container__margin-left {
+  margin-left: 15px;
+}
+
+.candidate-container__candidate-element {
+  display: flex;
+  justify-content: space-between;
+}
+
+.candidate-container__no-candidates-message {
+  color: rgb(52.3405405405, 158.1594594595, 98.9918918919);
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 300;
+  text-align: center;
+}
+
+.candidate-container__candidate-name {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.candidate-container__votes {
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.candidate-container__actions {
+  flex-shrink: 0;
+}
+
+.candidate-container__candidate-action-buttons {
+  color: green;
+  background-color: rgb(231.6261682243, 243.8831775701, 247.8738317757);
   border: 1px solid grey;
   cursor: pointer;
   font-weight: 600;
@@ -84,49 +199,84 @@ ul {
   outline: none;
   transition: background 0.5s ease;
 }
-.button:hover, .button:focus {
+.candidate-container__candidate-action-buttons:hover, .candidate-container__candidate-action-buttons:focus {
   background: blue;
   color: grey;
 }
-.button:active {
+.candidate-container__candidate-action-buttons:active {
   background: white;
   transition: transform 1s ease;
   transform: scale(1.3);
 }
 
-.button--round {
+.candidate-container__candidate-action-buttons--round {
   border-radius: 50%;
   height: 4rem;
   width: 4rem;
 }
 
-.form {
-  display: flex;
+.candidate-container--position-1 {
+  background-color: #ffe766;
 }
 
-.form__input {
-  border: 1px solid grey;
+.candidate-container--position-2 {
+  background-color: rgb(217.5, 217.5, 217.5);
+}
+
+.comment-container {
+  background-color: white;
+  border: 2px black solid;
+  border-radius: 6px;
+  margin-top: 0.5rem;
   padding: 1.3rem;
-  flex-grow: 1;
 }
 
-.candidate {
+.comment-container__topic-element {
   display: flex;
   justify-content: space-between;
 }
 
-.candidate__name {
-  font-weight: 400;
-  font-size: 2rem;
-}
-
-.candidate__votes {
-  font-size: 1.6rem;
+.comment-container__stats {
+  font-size: 1.3rem;
   font-style: italic;
   font-weight: 300;
-  text-decoration: underline;
 }
 
-.candidate__actions {
+.comment-container__actions {
   flex-shrink: 0;
+}
+
+.comment-container__comment-action-buttons {
+  color: green;
+  background-color: rgb(231.6261682243, 243.8831775701, 247.8738317757);
+  border: 1px solid grey;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 1.1rem;
+  padding: 1.1rem;
+  outline: none;
+  transition: background 0.5s ease;
+}
+.comment-container__comment-action-buttons:hover, .comment-container__comment-action-buttons:focus {
+  background: blue;
+  color: grey;
+}
+.comment-container__comment-action-buttons:active {
+  background: white;
+  transition: transform 1s ease;
+  transform: scale(1.3);
+}
+
+.comment-container__comment-action-buttons--round {
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+}
+
+.comment-container--position-1 {
+  background-color: rgb(231.6261682243, 243.8831775701, 247.8738317757);
+}
+
+.comment-container--position-2 {
+  background-color: rgb(232.453125, 251.546875, 232.453125);
 }

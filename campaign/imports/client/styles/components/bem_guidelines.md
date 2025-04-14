@@ -13,19 +13,26 @@
     // .some-item__element-name - example of multi word use
 
     // modifier - patern = blockName--some-modifier
-// {
-.single-block-item-style {
+// 
+.single-block-item-style {  
     background-color: white;
     border: 2px black solid;
     margin-top: .5rem;
     padding: 1.3rem;
-    }
+}
     
-.single-block-item-style__message {
-    color: seagreen;
+.single-block-item-style__message {     
+    color: $seagreen;
     font-size: 1.3rem;
     font-style: italic;
     font-weight: 300;
     text-align: center;
 }
-      
+
+.single-block-item-style--position-1 {      
+    background-color: $gold;
+  }
+.single-block-item-style--position-2 {     
+    background-color: $silver;
+  }
+     

@@ -3,19 +3,35 @@ import Candidate from './Candidate.js';
 import PropTypes from 'prop-types';
 import FlipMove from 'react-flip-move';
 
+import {Comments_About_Candidates_Collection_Access, Calculate_comment_rank}
+                        from '../api/comments_about_candidates.js';
+
 
 export default class CandidateList extends React.Component {
 
     renderCandidates() {
-      if (this.props.candidate_obj_prop.length === 0){
+
+      if (this.props.App_candidate_obj_prop.length === 0){
         return (
-          <div className='single-block-item-style'>
-            <p className = 'single-block-item-style__message'>Add a new candidate to get started</p>
+          <div className='candidate-container'>
+            <p className = 'candidate-container__no-candidates-message'>Add a new candidate to get started</p>
           </div>
         );
       } else {
-          let candidateInfo = this.props.candidate_obj_prop.map((candidate) => {
-            return <Candidate key={candidate._id} candidate_prop={candidate} />;
+          let candidateInfo = this.props.App_candidate_obj_prop.map((candidate) => {
+/* Obtain all the comments about 1 candidate (sorted by most first) and save them in a variable 
+    Comments_About_Candidates_Collection_Access.find (client/main.js around line 18) and 
+    candidate_id_in_comment_collection: ... will be helpful (found in CommentAddAnother.js - about line 20) 
+*/
+
+
+
+
+ /* rank the comments using Calculate_comment_rank (imported) and save them in a ranked_comments variable */         
+            
+
+  /* provide the ranked comments as a prop to Candidate.js */ 
+            return <Candidate key={candidate._id} CandidateList_candidate_prop={candidate} />;
           });
           return candidateInfo;
       }
@@ -38,5 +54,5 @@ export default class CandidateList extends React.Component {
 };
 
 CandidateList.propTypes = {
-    candidate_obj_prop: PropTypes.array.isRequired,
+  App_candidate_obj_prop: PropTypes.array.isRequired,
 };
