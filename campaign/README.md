@@ -1,4 +1,4 @@
-vid 33ba: rank and place challenge - solution
+vid 33a: rank and place challenge - solution
 
 
 GOALS
