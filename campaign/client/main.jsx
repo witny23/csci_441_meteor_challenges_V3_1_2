@@ -33,6 +33,7 @@ Meteor.startup(() => {
       </>
           
     );
+    // hint - when you create routes you will no longer render the jsx variable
     root.render(jsx);
   });
   
