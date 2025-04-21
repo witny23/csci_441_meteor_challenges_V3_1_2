@@ -22,21 +22,24 @@ Meteor.startup(() => {
     let positioned_candidates = Calculate_rank_and_position_for_candidates(candidates_in_db);
     let title = 'The big Campaign';
     let moderator = 'Grace Hopper';
-    // hint - you are going to change the jsx into const routes
-    let jsx = (
-      <>
-        <Instructions />
-        <App 
-          main_title_prop={title} 
-          main_moderator_prop={moderator}
-          main_candidate_obj_prop={positioned_candidates}
-        />
+    // hint - you are going to change the jsx into const routes = ( ...
+    const routes = (  
+ 
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" exact element={<Instructions />} />
+          <Route path="/App" element={<App 
+                                        main_title_prop={title} 
+                                        main_moderator_prop={moderator}
+                                        main_candidate_obj_prop={positioned_candidates}
+                                      />}/>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
 
-      </>
-          
     );
     // hint - when you create routes you will no longer render the jsx variable
-    root.render(jsx);
+    root.render(routes);
   });
   
 

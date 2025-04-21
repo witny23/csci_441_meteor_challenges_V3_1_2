@@ -1,4 +1,4 @@
-vid[s] 02a-02b: Routes and Links Challenge - begin
+vid[s] 02a-02b: Routes and Links Challenge - complete
 
 
 Route and Link challenge
