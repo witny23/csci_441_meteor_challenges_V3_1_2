@@ -1,12 +1,10 @@
 import React from 'react';
-import NavLinks from './NavLinks.js';
+// import NavLinks from './NavLinks.js';
 
 export default Instructions = () => {
-// export default class Instructions extends React.Component{ 
-  // render(){
+
     return (
     <div className='content'>
-      <NavLinks />
       <h1>Instructions</h1>
       <p>The purpose of this challenges is practice React Routes and &#60;Link&#62; (vids 02a, 02b) 
       </p>
