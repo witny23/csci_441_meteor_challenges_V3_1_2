@@ -36,13 +36,13 @@ export default class Candidate extends React.Component{
                 // if the candidate is deleted, the comments about the candidate should be deleted
                 // to do so, iterate (with .map) the comments and delete them one at a time,
                 //   use the comment_prop sent from the candidateList.js
-
-                
-
-
-
-
-
+                    this.props.CandidateList_comment_prop_array.map((comment) => {
+                        Comments_About_Candidates_Collection_Access.remove({_id: comment._id})
+                    });
+                // the following will not work b/c you can only remove by _id
+                    // Comments_About_Candidates_Collection_Access.remove(
+                    //     {candidate_id_in_comment_collection: this.props.CandidateList_candidate_prop._id}
+                    // )
 
                     }}>X</button> 
                     <button className='candidate-container__candidate-action-buttons 
@@ -60,10 +60,9 @@ export default class Candidate extends React.Component{
             </div>
             <div className='candidate-container__margin-left'>
 {/* obtain the CandidateList_candidate_prop from CandidateList.js and pass it as a prop to CommentAddAnother.js */}
-
+                <CommentAddAnother Candidate_candidate_obj_prop={this.props.CandidateList_candidate_prop}/>
 {/* obtain the CandidateList_comment_prop_array from CandidateList.js and pass it as a prop to CommentList.js*/}
-
-
+                <CommentList Candidate_comment_prop_array={this.props.CandidateList_comment_prop_array}/>
             </div>
 
 

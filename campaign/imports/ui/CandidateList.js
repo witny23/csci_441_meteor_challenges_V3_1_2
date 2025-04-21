@@ -20,18 +20,19 @@ export default class CandidateList extends React.Component {
       } else {
           let candidateInfo = this.props.App_candidate_obj_prop.map((candidate) => {
 /* Obtain all the comments about 1 candidate (sorted by most first) and save them in a variable 
-    Comments_About_Candidates_Collection_Access.find (client/main.js around line 18) and 
-    candidate_id_in_comment_collection: ... will be helpful (found in CommentAddAnother.js - about line 20) 
+    Comments_About_Candidates_Collection_Access.find and candidate_id_in_comment_collection: ... 
+      will be helpful (found in CommentAddAnother.js) 
+    client/main.js line 13 is a good example of the code needed
 */
-
-
-
-
- /* rank the comments using Calculate_comment_rank (imported) and save them in a ranked_comments variable */         
-            
+            let Single_Candidate_Comments =
+               Comments_About_Candidates_Collection_Access.find({candidate_id_in_comment_collection: candidate._id},
+                                                                  {sort: {total_comment_votes: -1}}).fetch();
+ /* rank the comments using Calculate_comment_rank */         
+            let ranked_comments = Calculate_comment_rank(Single_Candidate_Comments);
 
   /* provide the ranked comments as a prop to Candidate.js */ 
-            return <Candidate key={candidate._id} CandidateList_candidate_prop={candidate} />;
+            return <Candidate key={candidate._id} CandidateList_candidate_prop={candidate} 
+                          CandidateList_comment_prop_array={ranked_comments}/>;
           });
           return candidateInfo;
       }

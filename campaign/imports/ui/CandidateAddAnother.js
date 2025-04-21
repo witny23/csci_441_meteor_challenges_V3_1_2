@@ -25,9 +25,9 @@ export default class CandidateAddAnother extends React.Component {
     return (
 /* Add the appropriate classNames as created in _candidateForm.scss */
       <div className=''>
-        <form className='' onSubmit={this.processFormDataFunction.bind(this)}>
-          <input className='' type='text' name='formInputNameAttrubute' placeholder='Candidate Name' />
-          <button className=''>Add Candidate</button>
+        <form className='candidate-addition-container__form' onSubmit={this.processFormDataFunction.bind(this)}>
+          <input className='candidate-addition-container__input' type='text' name='formInputNameAttrubute' placeholder='Candidate Name' />
+          <button className='candidate-addition-container__add-candidate-button'>Add Candidate</button>
         </form>
       </div>
     )

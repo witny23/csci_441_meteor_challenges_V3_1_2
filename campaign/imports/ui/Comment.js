@@ -12,7 +12,9 @@ export default class Comments extends React.Component{
 
     let possible_link = this.props.comment_prop_obj.comment;
 /* check if comment containes a link. If it does, make it into a clickable link that opens in a new tab */
-
+    if (possible_link.includes('http')){
+      possible_link = <a href={possible_link} target='_blank'>{possible_link}</a>;
+    };
     
     return (
       <>
