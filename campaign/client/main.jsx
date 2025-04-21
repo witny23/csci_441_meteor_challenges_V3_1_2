@@ -5,7 +5,8 @@ import {Tracker} from 'meteor/tracker';
 
 import Instructions from '../imports/ui/Instructions.js';
 import App from '../imports/ui/App.js';
-import {Candidates_Collection_Access} from '../imports/api/candidates.js'; 
+import NotFound from './../imports/ui/NotFound.js';
+import {Calculate_rank_and_position_for_candidates, Candidates_Collection_Access} from '../imports/api/candidates.js'; 
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -18,16 +19,17 @@ Meteor.startup(() => {
   Tracker.autorun(() => { 
 
     let candidates_in_db = Candidates_Collection_Access.find({}, {sort: {votes: -1}}).fetch();
+    let positioned_candidates = Calculate_rank_and_position_for_candidates(candidates_in_db);
     let title = 'The big Campaign';
     let moderator = 'Grace Hopper';
-    
+    // hint - you are going to change the jsx into const routes
     let jsx = (
       <>
         <Instructions />
         <App 
           main_title_prop={title} 
           main_moderator_prop={moderator}
-          main_candidate_obj_prop={candidates_in_db}
+          main_candidate_obj_prop={positioned_candidates}
         />
 
       </>
