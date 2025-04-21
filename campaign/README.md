@@ -1,4 +1,4 @@
-vid 35a: comment, link, and style: Challenge start
+vid 35a: comment, link, and style Challenge - start
 
 GOALS
 

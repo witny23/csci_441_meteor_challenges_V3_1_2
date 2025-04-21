@@ -12,9 +12,9 @@ export default class CommentList extends React.Component {
       aprox line 21 in CandidateList.js is a good example
 */}
 
-      return this.props.Candidate_comment_prop_array.map((single_comment) => {        
-        return <Comment key={single_comment._id} comment_prop_obj={single_comment}/>
-      });
+
+
+
   }
   render(){
     return (
