@@ -2,8 +2,7 @@
 
 import {Candidates_Collection_Access} from '../imports/api/candidates.js'; 
 
-/* challenge code ***********************************************************/
-import { Comments_About_Candidates_Collection_Access } from '../imports/api/comments_about_candidates.js';
+
 
 
 
@@ -11,9 +10,7 @@ Meteor.publish("candidates_collection", () => {
   return Candidates_Collection_Access.find();
 });
 
-Meteor.publish("comments_about_canditates_collection", () => {
-  return Comments_About_Candidates_Collection_Access.find();
-});
+
 
 
 Meteor.startup(async () => {
@@ -37,5 +34,4 @@ Meteor.startup(async () => {
 
   // Assign the allowAllOperations rules to both collections.
   Candidates_Collection_Access.allow(allowAllOperations);
-  Comments_About_Candidates_Collection_Access.allow(allowAllOperations);
 });

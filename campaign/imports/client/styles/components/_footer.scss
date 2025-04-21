@@ -1,12 +1,9 @@
-@use '../base/_variables.scss' as vars; // need access to the variables and name them vars
-
-.footer {  
+.footer {
     color: white;
-}
-.footer-wrapper { 
+  }
+  .footer-wrapper {
     margin: 0 auto;
     max-width: 50rem; // 500px based off the unit sizing
     padding: 1.3rem;  // 13px
     background-color: blue;
-    border-radius: 0px 0px vars.$radius vars.$radius;
-}
+  }

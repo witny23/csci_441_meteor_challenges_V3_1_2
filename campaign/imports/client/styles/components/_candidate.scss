@@ -1,77 +1,22 @@
-@use '../base/_variables.scss' as vars; // need access to the variables and name them vars
-
-
-.candidate-container {  
-  background-color: white;
-  border: 2px black solid;
-  border-radius: vars.$radius;
-  margin-top: .5rem;
-  padding: 1.3rem;
-  }
-.candidate-container__margin-left {
-  margin-left: 15px;
-}
-.candidate-container__candidate-element {         
-  display: flex;
+.candidate {
+    display: flex;
     //  justify-content: center;  // lets you specify where the elements are positioned
     //  justify-content: space-around;  // even space before, between, and after
-  justify-content: space-between;  // take leftover space and put it in the middle
+    justify-content: space-between;  // take leftover space and put it in the middle
 }
-.candidate-container__no-candidates-message {     
-  color: vars.$seagreen;
-  font-size: 1.3rem;
-  font-style: italic;
-  font-weight: 300;
-  text-align: center;
-}
-.candidate-container__candidate-name {         
-  font-weight: 400;
-  font-size: 2.0rem;
+.candidate__name {
+    font-weight: 400;
+    font-size: 2.0rem;
 }
 
-.candidate-container__votes {        
-  font-size: 1.6rem;
-  font-style: italic;
-  font-weight: 300;
+.candidate__votes {
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 300;
+    text-decoration: underline;
 }
 
-.candidate-container__actions {      
+.candidate__actions {
     flex-shrink: 0; // never shrink the item no matter how big the other stuff gets  
 }
-.candidate-container__candidate-action-buttons {               
-  color: green;
-  background-color: vars.$lightblue;
-  border: 1px solid grey;
-  cursor: pointer; //little hand
-  font-weight: 600; // a litle thicker
-  margin-right: 1.1rem;
-  padding: 1.1rem;
-  outline: none;  // should keep b/c of accessibility but we are handling that w/ the following code
-  transition: background .5s ease;  // change properties smoothly, over a given duration
 
-  // pseudo selectors using scss to change the background
-  // & allows us to add additional things to the current selector
-  &:hover, &:focus {
-    background: blue;
-    color: grey;
-  }
-  &:active {
-    background: white;  // shows up white when hold click
-    transition: transform 1s ease;
-    transform: scale(1.3);  // make the button a little bigger when clicked
-  }
-}
-  
-
-.candidate-container__candidate-action-buttons--round {                   
-  border-radius: 50%; // perfect circle
-  height: 4rem;
-  width: 4rem;
-}
-
-.candidate-container--position-1 {     
-  background-color: vars.$gold;
-}
-.candidate-container--position-2 {      
-  background-color: vars.$silver;
-}
