@@ -14,8 +14,12 @@ export const Instructions = () => {
       <p>Assume you are working on a team and you have been asked to complete the following: 
       </p>
       <h2>Part 1: Install  </h2>
-      <p>In the terminal: meteor add accounts-password <br></br>
-            - accounts-password is being added to meteor vs specifically to your project</p>      
+      <p>In the terminal, run the following:</p>
+      <ul>
+        <li>meteor add accounts-base</li>
+        <li>meteor add accounts-password</li>
+      </ul>
+            <p>- the two are being added to meteor vs specifically to your project</p>      
       <h2>Part 2: Signup.jsx - Accounts.createUser</h2>
       <ol>
         <li>Write the code needed to allow a user to signup</li>
