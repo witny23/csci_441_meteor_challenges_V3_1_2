@@ -1,6 +1,6 @@
 import React from 'react'; 
 import PropTypes from 'prop-types';
-import {Candidates_Collection_Access} from './../api/candidates.js'; 
+import {Candidates} from './../api/candidates.js'; 
 
 export default class Candidate extends React.Component{
   render(){
@@ -19,13 +19,13 @@ export default class Candidate extends React.Component{
                 </div>
                 <div className='candidate__actions'>
                     <button className='button button--round' onClick={() => { 
-                        Candidates_Collection_Access.remove({_id: this.props.candidate_prop._id})
+                        Candidates.remove({_id: this.props.candidate_prop._id})
                     }}>X</button> 
                     <button className='button button--round' onClick={() => { 
-                        Candidates_Collection_Access.update({_id: this.props.candidate_prop._id}, {$inc: {votes: 1}})
+                        Candidates.update({_id: this.props.candidate_prop._id}, {$inc: {votes: 1}})
                     }}>+1</button> 
                     <button className='button button--round' onClick={() => {  
-                        Candidates_Collection_Access.update({_id: this.props.candidate_prop._id}, {$inc: {votes: -1}})
+                        Candidates.update({_id: this.props.candidate_prop._id}, {$inc: {votes: -1}})
                     }}>-1</button>
                 </div>
 

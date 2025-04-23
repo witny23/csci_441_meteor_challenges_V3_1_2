@@ -1,5 +1,5 @@
 import React from 'react';
-import Candidate from './Candidate.js';
+import Candidate from './Candidate.jsx';
 
 export default CandidateList = (props) => {
 

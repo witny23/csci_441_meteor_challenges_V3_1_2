@@ -1,33 +1,42 @@
-vid[s] 02a-02b: Routes and Links Challenge - complete
+vid[s] 03b-05a: Authentication and useNavigate() challenge - start
 
 
-Route and Link challenge
+
+Authentication and useNavigate() challenge 
+
+INSTALL PROCESS
+    In the terminal:
+        meteor add accounts-password
+            - accounts-password is being added to meteor vs specifically to your project
+
 
 GOALS
 
     Understand the utilization and implementation of:
 
-        React Router
-        - https://www.w3schools.com/react/react_router.asp
-        - https://reactrouter.com/docs/en/v6/getting-started/overview
-
-        BrowserRouter - A <Router> that uses the HTML5 history API (pushState, replaceState and the popstate event) to keep your UI in sync with the URL.
-                - https://v5.reactrouter.com/web/api/BrowserRouter
-
-        Routes - a container consisting of one or more <Route>
-
-        Route - An object or Route Element typically with a shape of { path, element } or <Route path element>. The path is a path pattern. When the path pattern matches the current URL, the element will be rendered.
-                - https://reactrouter.com/docs/en/v6/getting-started/concepts
-
-        Route - to put another way: 
-                    Route is the conditionally shown component that renders some UI when its path matches the current URL.
+    accounts-password
+        - Passwords Docs: https://docs.meteor.com/api/passwords.html
+            -  The accounts-password package contains a full system for 
+                password-based authentication. In addition to the basic username and password-based sign-in process, it also supports email-based sign-in including address verification and password recovery emails.
+        - Accounts.createUser: https://docs.meteor.com/api/passwords.html#Accounts-createUser  
+        - Accounts: https://docs.meteor.com/api/accounts.html
 
 
-        Route Config - A tree of routes objects that will be ranked and matched (with nesting) against the current location to create a branch of route matches.
-            
-        <Link> - is used to set the URL and keep track of browsing history.
-            - Nav links: https://reactrouter.com/docs/en/v6/getting-started/overview#navigation
-            - tutorial: https://reactrouter.com/docs/en/v6/getting-started/tutorial#add-some-links
+    In imports/ui/Signup.js:
+        create new user accounts
+        - have meteor do the hard work of creating accounts b/c of its built in capabilities
+            in submitForm we call one meteor method and meteor does the rest
+            - hash password, communicate with server, manage auth tokens
+
+        Using the useState Hook and Working with Forms in React.js:
+        - https://dev.to/jleewebdev/using-the-usestate-hook-and-working-with-forms-in-react-js-m6b
+
+
+    - Login.jsx
+        - learn about Meteor.loginWithPassword(user: Object | string, password: string, [callback])
+        - Docs: https://docs.meteor.com/api/accounts.html#Meteor-loginWithPassword
+
+
 
 
 INSTRUCTIONS

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';  
-import {Candidates_Collection_Access} from './../api/candidates.js';
+import {Candidates} from './../api/candidates.js';
 
 export default  AddCandidates = () => {
 
@@ -9,7 +9,7 @@ export default  AddCandidates = () => {
   const processFormDataFunction = (event) => {  
     event.preventDefault(); 
     if(candidateName_state){  
-      Candidates_Collection_Access.insert({     
+      Candidates.insert({     
           name: candidateName_state,
           votes: 0,
       });

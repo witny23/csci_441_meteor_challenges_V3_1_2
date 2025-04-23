@@ -1,20 +1,20 @@
 import React from 'react';
-import TitleBar from './TitleBar.js';
-import AddCandidates from './AddCandidates.js';
-import CandidateList from './CandidateList.js';
-import NavLinks from './NavLinks.js';
+import TitleBar from './TitleBar.jsx';
+import AddCandidates from './AddCandidates.jsx';
+import CandidateList from './CandidateList.jsx';
+import NavLinks from './NavLinks.jsx';
 
-export default App = (props) => {
+export const App = (props) => {
 
    return (
-     <>
+     <div className='content'>
         <NavLinks />
         <TitleBar title_prop={props.main_title_prop} moderator_prop={props.main_moderator_prop}/>
         <div className='wrapper'>
           <AddCandidates/>
           <CandidateList candidate_obj_prop={props.main_candidate_obj_prop}/>
         </div>
-      </>
+      </div>
 
     );
 };

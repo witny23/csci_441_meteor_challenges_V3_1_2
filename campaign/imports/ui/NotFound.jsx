@@ -1,8 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-// functional component
-export default NotFound = () => {
+export const NotFound = () => {
   
   return (
     <div className='content'>
