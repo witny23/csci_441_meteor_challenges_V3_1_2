@@ -19,7 +19,11 @@ export const Login = () => {
   function submitForm(event){
     event.preventDefault();   
 
-                        
+    Meteor.loginWithPassword({email: formData_state.email}, formData_state.password, (errorCallbackObject) => {
+      console.log('signup callback error', errorCallbackObject);
+    }); 
+
+    navigate("/App");                          
   }
 
 // We can check if login works by creating a new user, logging out, then loggin in
@@ -35,10 +39,14 @@ export const Login = () => {
       <br></br>
       <form onSubmit={submitForm}>
         <input  type='email' 
-                placeholder='Email'/>
+                placeholder='Email'
+                value={formData_state.email}
+                onChange={(e) => setFormData({...formData_state, email: e.target.value})} />
 
         <input  type='password' 
-                placeholder='Password' />
+                placeholder='Password' 
+                value={formData_state.password} 
+                onChange={(e) => setFormData({...formData_state, password: e.target.value})}/>
         <button>Login</button>
       </form>
     </div>

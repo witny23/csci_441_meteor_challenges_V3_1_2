@@ -19,6 +19,11 @@ export const Signup = () => {
   function submitForm(event){
     event.preventDefault();   
 
+    Accounts.createUser({email: formData_state.email, password: formData_state.password}, (errorCallbackObject) => {
+      console.log('signup callback error', errorCallbackObject);
+    }); 
+
+    navigate("/App");
                                   
   }
   // We can check if Signup works by using the following in the console:
@@ -34,10 +39,14 @@ export const Signup = () => {
       <br></br>
       <form onSubmit={submitForm}>
         <input  type='email'
-                placeholder='Email'  />
+                placeholder='Email'  
+                value={formData_state.email}
+                onChange={(e) => setFormData({...formData_state, email: e.target.value})}/>
 
         <input  type='password' 
                 placeholder='Password' 
+                value={formData_state.password} 
+                onChange={(e) => setFormData({...formData_state, password: e.target.value})}
                 />
         <button>Create Account</button>
       </form>

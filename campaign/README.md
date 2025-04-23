@@ -1,4 +1,4 @@
-vid[s] 03b-05a: Authentication and useNavigate() challenge - start
+vid[s] 03b-05a: Authentication and useNavigate() challenge - complete
 
 
 
